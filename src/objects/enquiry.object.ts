@@ -64,7 +64,7 @@ export default defineObject({
         { id: '58cea3c0-3437-4139-b6ea-c1d8cba22749', value: EnquirySource.REFERRAL, label: 'Referral', position: 3, color: 'purple' },
         { id: '84af08b7-31c8-4638-90b2-f5f3de351a14', value: EnquirySource.WALK_IN, label: 'Walk In', position: 4, color: 'yellow' },
         { id: 'a0aa8269-8b7a-4d5f-b96b-f9cbfa923b2d', value: EnquirySource.SOCIAL_MEDIA, label: 'Social Media', position: 5, color: 'pink' },
-        { id: '2994a97b-f14d-49ee-b45d-edc6bf4adb56', value: EnquirySource.PORTAL, label: 'Portal', position: 6, color: 'cyan' },
+        { id: '2994a97b-f14d-49ee-b45d-edc6bf4adb56', value: EnquirySource.PORTAL, label: 'Portal', position: 6, color: 'blue' },
       ],
       name: 'source',
     },
