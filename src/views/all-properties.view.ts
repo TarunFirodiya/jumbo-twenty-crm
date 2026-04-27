@@ -9,6 +9,9 @@ import {
   BEDROOMS_FIELD_UNIVERSAL_IDENTIFIER,
   BATHROOMS_FIELD_UNIVERSAL_IDENTIFIER,
   SQFT_FIELD_UNIVERSAL_IDENTIFIER,
+  JUMBO_ID_FIELD,
+  LISTING_TYPE_FIELD,
+  ZONE_FIELD_UNIVERSAL_IDENTIFIER,
 } from '../objects/property.object';
 
 export const ALL_PROPERTIES_VIEW_ID = '50330cea-0735-400c-8234-195de61f58c3';
@@ -21,13 +24,15 @@ export default defineView({
   icon: 'IconHome',
   isCompact: false,
   fields: [
-    { universalIdentifier: '50b9854f-4310-407e-9427-98823405864a', fieldMetadataUniversalIdentifier: NAME_FIELD_UNIVERSAL_IDENTIFIER, position: 0, isVisible: true },
-    { universalIdentifier: '58ae00cb-5be5-474a-a90d-ee5708c0077c', fieldMetadataUniversalIdentifier: ADDRESS_FIELD_UNIVERSAL_IDENTIFIER, position: 1, isVisible: true },
-    { universalIdentifier: '6f45669f-c9cb-49c9-9b7f-db0b7d943c94', fieldMetadataUniversalIdentifier: PRICE_FIELD_UNIVERSAL_IDENTIFIER, position: 2, isVisible: true },
-    { universalIdentifier: '5ec11f87-490d-4a20-aed8-95704c2b5511', fieldMetadataUniversalIdentifier: STATUS_FIELD_UNIVERSAL_IDENTIFIER, position: 3, isVisible: true },
-    { universalIdentifier: 'a9c78f35-2625-4040-a7c7-4714c4be89a7', fieldMetadataUniversalIdentifier: TYPE_FIELD_UNIVERSAL_IDENTIFIER, position: 4, isVisible: true },
-    { universalIdentifier: '72afdcb8-365d-4fff-add8-264ba4a7b673', fieldMetadataUniversalIdentifier: BEDROOMS_FIELD_UNIVERSAL_IDENTIFIER, position: 5, isVisible: true },
-    { universalIdentifier: 'a27f6c62-15b2-4dc4-8805-9b7e652f5f6a', fieldMetadataUniversalIdentifier: BATHROOMS_FIELD_UNIVERSAL_IDENTIFIER, position: 6, isVisible: true },
-    { universalIdentifier: '4843b17a-f313-4e64-bd14-807e5129c9b4', fieldMetadataUniversalIdentifier: SQFT_FIELD_UNIVERSAL_IDENTIFIER, position: 7, isVisible: true },
+    { universalIdentifier: '5b795801-1004-4cb4-9575-b8d967f19387', fieldMetadataUniversalIdentifier: NAME_FIELD_UNIVERSAL_IDENTIFIER, position: 0, isVisible: true },
+    { universalIdentifier: '2e09c25b-552e-439c-95df-65334d73d5c7', fieldMetadataUniversalIdentifier: JUMBO_ID_FIELD, position: 1, isVisible: true },
+    { universalIdentifier: '0f84771a-6e8f-41bd-97f5-e09bc8c80af9', fieldMetadataUniversalIdentifier: PRICE_FIELD_UNIVERSAL_IDENTIFIER, position: 2, isVisible: true },
+    { universalIdentifier: '2f736f8c-0085-416f-b12d-ac8798015083', fieldMetadataUniversalIdentifier: STATUS_FIELD_UNIVERSAL_IDENTIFIER, position: 3, isVisible: true },
+    { universalIdentifier: '89fbaf79-8d86-483d-97a1-47feda8320d0', fieldMetadataUniversalIdentifier: LISTING_TYPE_FIELD, position: 4, isVisible: true },
+    { universalIdentifier: '9d4cd474-1eb8-4867-b1a5-0ec15e504755', fieldMetadataUniversalIdentifier: TYPE_FIELD_UNIVERSAL_IDENTIFIER, position: 5, isVisible: true },
+    { universalIdentifier: 'a7c78c78-2de5-43ab-8788-e4a7b5512d20', fieldMetadataUniversalIdentifier: ZONE_FIELD_UNIVERSAL_IDENTIFIER, position: 6, isVisible: true },
+    { universalIdentifier: '0d3564c3-eba7-466f-81d2-6a8858c98193', fieldMetadataUniversalIdentifier: BEDROOMS_FIELD_UNIVERSAL_IDENTIFIER, position: 7, isVisible: true },
+    { universalIdentifier: '2d5db7d3-9214-46cb-8755-a3760659bf7a', fieldMetadataUniversalIdentifier: BATHROOMS_FIELD_UNIVERSAL_IDENTIFIER, position: 8, isVisible: true },
+    { universalIdentifier: 'f84771a6-6e8f-41bd-97f5-e09bc8c80af0', fieldMetadataUniversalIdentifier: SQFT_FIELD_UNIVERSAL_IDENTIFIER, position: 9, isVisible: true },
   ],
 });
