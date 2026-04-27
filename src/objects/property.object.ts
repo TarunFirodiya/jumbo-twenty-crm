@@ -16,7 +16,64 @@ enum PropertyType {
   COMMERCIAL = 'COMMERCIAL',
 }
 
+enum HomeView {
+  POOL = 'POOL',
+  GARDEN = 'GARDEN',
+  ROAD = 'ROAD',
+  CITY = 'CITY',
+  PARK = 'PARK',
+  LAKE = 'LAKE',
+}
+
+enum Facing {
+  NORTH = 'NORTH',
+  SOUTH = 'SOUTH',
+  EAST = 'EAST',
+  WEST = 'WEST',
+  NORTH_EAST = 'NORTH_EAST',
+  NORTH_WEST = 'NORTH_WEST',
+  SOUTH_EAST = 'SOUTH_EAST',
+  SOUTH_WEST = 'SOUTH_WEST',
+}
+
+enum HomeType {
+  RESALE = 'RESALE',
+  NEW = 'NEW',
+  PLOT = 'PLOT',
+}
+
+enum Occupancy {
+  SELF = 'SELF',
+  TENANT = 'TENANT',
+  VACANT = 'VACANT',
+}
+
+enum Furnishing {
+  UNFURNISHED = 'UNFURNISHED',
+  SEMI_FURNISHED = 'SEMI_FURNISHED',
+  FULLY_FURNISHED = 'FULLY_FURNISHED',
+}
+
+enum KeysWith {
+  OWNER = 'OWNER',
+  AGENT = 'AGENT',
+  SECURITY = 'SECURITY',
+}
+
+enum InventoryType {
+  EXCLUSIVE = 'EXCLUSIVE',
+  OPEN = 'OPEN',
+  CO_BROKE = 'CO_BROKE',
+}
+
+enum ListingType {
+  RESERVE = 'RESERVE',
+  CERTIFIED = 'CERTIFIED',
+}
+
 export const PROPERTY_UNIVERSAL_IDENTIFIER = '32e135d0-16b0-4c08-a90f-d4505931bae0';
+
+// Existing field IDs
 export const NAME_FIELD_UNIVERSAL_IDENTIFIER = '1ea8237c-d043-4305-a788-ccac4bddd29a';
 export const ADDRESS_FIELD_UNIVERSAL_IDENTIFIER = '5d2643e9-ae70-48f4-afe7-b44f741ad44a';
 export const PRICE_FIELD_UNIVERSAL_IDENTIFIER = 'd314dd63-0354-4fef-9ce4-afb58e9b93e6';
@@ -27,6 +84,38 @@ export const STATUS_FIELD_UNIVERSAL_IDENTIFIER = '79b21e74-9893-4211-a933-c4bff8
 export const TYPE_FIELD_UNIVERSAL_IDENTIFIER = '62dd2bc0-f87a-499f-a2ab-735e7b53c562';
 export const AMENITIES_FIELD_UNIVERSAL_IDENTIFIER = '5cdc44ba-9574-4f38-8cc4-f6c1f805fafb';
 export const ZONE_FIELD_UNIVERSAL_IDENTIFIER = 'b9746f33-ad4f-44c5-99dc-008ef261d91e';
+export const FILES_FIELD_UNIVERSAL_IDENTIFIER = '29d9b019-ac02-45bd-a242-81c5bb459c23';
+
+// New field IDs
+export const JUMBO_ID_FIELD = '03d065e1-2305-49d7-9e83-84f1a3aa6515';
+export const TOWER_FIELD = '2f3aa740-be27-4acd-ba59-f69a06c0563c';
+export const VIEW_FIELD = '278a250e-fb0c-4b86-a878-ff027e1096e5';
+export const MSP_FIELD = '53d6aa40-4d13-4374-b1f8-8f7c02b3ac1b';
+export const MAINTENANCE_FIELD = '188013eb-82b9-4d0c-bd7e-f99e2b48df70';
+export const CARPET_AREA_FIELD = 'b5230be9-208b-41a1-bdfa-9bb7bea1da85';
+export const FACING_FIELD = '9f36eb2f-9df7-486f-811a-47cc34ce43dd';
+export const FLOOR_FIELD = '651eebfe-8c6d-44bf-bdef-75d07c496316';
+export const USP1_FIELD = '91554497-ec79-47b3-98e3-7ff9213df7d1';
+export const USP2_FIELD = '779b2899-2ba6-4480-8124-3f33f75b3b33';
+export const USP3_FIELD = '1c6278e6-a4d5-4a38-93a1-ce5c945fbfb3';
+export const HOME_TYPE_FIELD = 'c80010b4-fd7a-4ad0-b889-a6afcb9901ef';
+export const OCCUPANCY_FIELD = '111fd1b2-3014-4818-b8dc-51ffe4dcac6d';
+export const FURNISHING_FIELD = 'ce7c655c-7413-4c91-a465-5da2882278b6';
+export const SELLER_FEES_FIELD = '194d4c5a-4dc3-473a-a357-ce1ba85ac512';
+export const PARKING_FIELD = '2eb0f18d-c0be-4736-9be1-1f649fa7b0bd';
+export const BALCONY_FIELD = '8151972e-671a-4bfd-bf7d-5ed8446bb816';
+export const KEYS_WITH_FIELD = 'faf7caa8-90bb-40c0-8791-afa177a9fe8e';
+export const INVENTORY_TYPE_FIELD = 'be2301b6-bb87-4d6c-bfc3-62f7595a49a9';
+export const JUMBO_URL_FIELD = 'ce158b82-f0b9-4955-bb4f-a66729b419c6';
+export const HOUSING_URL_FIELD = '5f64c3ff-2378-460a-92b9-6ff4e81e3c93';
+export const NINETYNINE_ACRES_URL_FIELD = 'e4ffe10e-0982-4904-bf3a-40934bcf8f43';
+export const HOUSING_ID_FIELD = '1f849bc6-6e5d-4821-abe8-53b1f8f091bd';
+export const NINETYNINE_ACRES_ID_FIELD = '6a972c94-893e-47d8-9ce9-ba5016299a29';
+export const GTM_READY_FIELD = '31dc3f0d-7753-4f88-95e2-6454c7d661eb';
+export const WEBSITE_LIVE_DATE_FIELD = 'e27738ae-9839-47c6-b13c-82d6a80e5aa6';
+export const HID_FIELD = '81136f11-45f0-4990-b380-e426cb6b8582';
+export const LISTING_SLUG_FIELD = '757aff7a-a971-43fb-9a9c-cc58ee456a7c';
+export const LISTING_TYPE_FIELD = '8e430749-85d3-4e90-a306-78acb8acba90';
 
 export default defineObject({
   universalIdentifier: PROPERTY_UNIVERSAL_IDENTIFIER,
@@ -38,6 +127,7 @@ export default defineObject({
   icon: 'IconHome',
   labelIdentifierFieldMetadataUniversalIdentifier: NAME_FIELD_UNIVERSAL_IDENTIFIER,
   fields: [
+    // Core fields
     {
       universalIdentifier: NAME_FIELD_UNIVERSAL_IDENTIFIER,
       type: FieldType.TEXT,
@@ -82,7 +172,7 @@ export default defineObject({
       universalIdentifier: SQFT_FIELD_UNIVERSAL_IDENTIFIER,
       type: FieldType.NUMBER,
       label: 'Square Feet',
-      description: 'Property size in sq ft',
+      description: 'Property size in sq ft (super built-up)',
       icon: 'IconRuler',
       name: 'squareFeet',
     },
@@ -131,8 +221,8 @@ export default defineObject({
       name: 'amenities',
     },
     {
+      universalIdentifier: FILES_FIELD_UNIVERSAL_IDENTIFIER,
       type: FieldType.FILES,
-      universalIdentifier: '29d9b019-ac02-45bd-a242-81c5bb459c23',
       label: 'Photos & Documents',
       description: 'Property photos, floor plans, and KYC documents',
       icon: 'IconPhoto',
@@ -142,8 +232,8 @@ export default defineObject({
       },
     },
     {
+      universalIdentifier: ZONE_FIELD_UNIVERSAL_IDENTIFIER,
       type: FieldType.SELECT,
-      universalIdentifier: 'b9746f33-ad4f-44c5-99dc-008ef261d91e',
       label: 'Zone',
       description: 'Bangalore zone for property',
       icon: 'IconMap',
@@ -155,6 +245,310 @@ export default defineObject({
         { id: '541b8a62-c507-4699-8e5a-ca428c466925', value: 'MG_ROAD', label: 'MG Road', position: 3, color: 'purple' },
         { id: '6a10070e-5ff9-4d60-86ba-19e00fb5a377', value: 'JAYANAGAR', label: 'Jayanagar', position: 4, color: 'red' },
       ],
+    },
+    // New fields
+    {
+      universalIdentifier: JUMBO_ID_FIELD,
+      type: FieldType.TEXT,
+      label: 'Jumbo ID',
+      description: 'Auto-generated Jumbo reference ID',
+      icon: 'IconHash',
+      name: 'jumboId',
+    },
+    {
+      universalIdentifier: TOWER_FIELD,
+      type: FieldType.TEXT,
+      label: 'Tower',
+      description: 'Tower or wing name within the building',
+      icon: 'IconBuilding',
+      name: 'tower',
+    },
+    {
+      universalIdentifier: VIEW_FIELD,
+      type: FieldType.SELECT,
+      label: 'View',
+      description: 'Primary view from the property',
+      icon: 'IconEye',
+      options: [
+        { id: 'a1b2c3d4-e5f6-7890-abcd-ef1234567891', value: HomeView.POOL, label: 'Pool View', position: 0, color: 'blue' },
+        { id: 'a1b2c3d4-e5f6-7890-abcd-ef1234567892', value: HomeView.GARDEN, label: 'Garden View', position: 1, color: 'green' },
+        { id: 'a1b2c3d4-e5f6-7890-abcd-ef1234567893', value: HomeView.ROAD, label: 'Road View', position: 2, color: 'orange' },
+        { id: 'a1b2c3d4-e5f6-7890-abcd-ef1234567894', value: HomeView.CITY, label: 'City View', position: 3, color: 'purple' },
+        { id: 'a1b2c3d4-e5f6-7890-abcd-ef1234567895', value: HomeView.PARK, label: 'Park View', position: 4, color: 'yellow' },
+        { id: 'a1b2c3d4-e5f6-7890-abcd-ef1234567896', value: HomeView.LAKE, label: 'Lake View', position: 5, color: 'gray' },
+      ],
+      name: 'homeView',
+    },
+    {
+      universalIdentifier: MSP_FIELD,
+      type: FieldType.CURRENCY,
+      label: 'MSP',
+      description: 'Minimum selling price in INR',
+      icon: 'IconCurrencyRupee',
+      name: 'msp',
+    },
+    {
+      universalIdentifier: MAINTENANCE_FIELD,
+      type: FieldType.CURRENCY,
+      label: 'Maintenance',
+      description: 'Monthly maintenance cost in INR',
+      icon: 'IconCurrencyRupee',
+      name: 'maintenance',
+    },
+    {
+      universalIdentifier: CARPET_AREA_FIELD,
+      type: FieldType.NUMBER,
+      label: 'Carpet Area',
+      description: 'Carpet area in sq ft',
+      icon: 'IconRuler',
+      name: 'carpetArea',
+    },
+    {
+      universalIdentifier: FACING_FIELD,
+      type: FieldType.SELECT,
+      label: 'Facing',
+      description: 'Direction the property faces',
+      icon: 'IconCompass',
+      options: [
+        { id: 'b1c2d3e4-f5a6-7890-abcd-ef1234567891', value: Facing.NORTH, label: 'North', position: 0, color: 'blue' },
+        { id: 'b1c2d3e4-f5a6-7890-abcd-ef1234567892', value: Facing.SOUTH, label: 'South', position: 1, color: 'green' },
+        { id: 'b1c2d3e4-f5a6-7890-abcd-ef1234567893', value: Facing.EAST, label: 'East', position: 2, color: 'orange' },
+        { id: 'b1c2d3e4-f5a6-7890-abcd-ef1234567894', value: Facing.WEST, label: 'West', position: 3, color: 'purple' },
+        { id: 'b1c2d3e4-f5a6-7890-abcd-ef1234567895', value: Facing.NORTH_EAST, label: 'North East', position: 4, color: 'yellow' },
+        { id: 'b1c2d3e4-f5a6-7890-abcd-ef1234567896', value: Facing.NORTH_WEST, label: 'North West', position: 5, color: 'red' },
+        { id: 'b1c2d3e4-f5a6-7890-abcd-ef1234567897', value: Facing.SOUTH_EAST, label: 'South East', position: 6, color: 'gray' },
+        { id: 'b1c2d3e4-f5a6-7890-abcd-ef1234567898', value: Facing.SOUTH_WEST, label: 'South West', position: 7, color: 'pink' },
+      ],
+      name: 'facing',
+    },
+    {
+      universalIdentifier: FLOOR_FIELD,
+      type: FieldType.NUMBER,
+      label: 'Floor',
+      description: 'Floor number',
+      icon: 'IconLayers',
+      name: 'floor',
+    },
+    {
+      universalIdentifier: USP1_FIELD,
+      type: FieldType.SELECT,
+      label: 'USP 1',
+      description: 'Key selling point 1',
+      icon: 'IconStar',
+      options: [
+        { id: 'c1d2e3f4-a5b6-7890-abcd-ef1234567891', value: 'CORNER', label: 'Corner Unit', position: 0, color: 'blue' },
+        { id: 'c1d2e3f4-a5b6-7890-abcd-ef1234567892', value: 'VASTU', label: 'Vastu Compliant', position: 1, color: 'green' },
+        { id: 'c1d2e3f4-a5b6-7890-abcd-ef1234567893', value: 'RENOVATED', label: 'Recently Renovated', position: 2, color: 'orange' },
+        { id: 'c1d2e3f4-a5b6-7890-abcd-ef1234567894', value: 'PREMIUM', label: 'Premium Fittings', position: 3, color: 'purple' },
+        { id: 'c1d2e3f4-a5b6-7890-abcd-ef1234567895', value: 'GOLF', label: 'Golf Course View', position: 4, color: 'yellow' },
+      ],
+      name: 'usp1',
+    },
+    {
+      universalIdentifier: USP2_FIELD,
+      type: FieldType.SELECT,
+      label: 'USP 2',
+      description: 'Key selling point 2',
+      icon: 'IconStar',
+      options: [
+        { id: 'd2e3f4a5-b6c7-8901-bcde-f23456789011', value: 'CORNER', label: 'Corner Unit', position: 0, color: 'blue' },
+        { id: 'd2e3f4a5-b6c7-8901-bcde-f23456789012', value: 'VASTU', label: 'Vastu Compliant', position: 1, color: 'green' },
+        { id: 'd2e3f4a5-b6c7-8901-bcde-f23456789013', value: 'RENOVATED', label: 'Recently Renovated', position: 2, color: 'orange' },
+        { id: 'd2e3f4a5-b6c7-8901-bcde-f23456789014', value: 'PREMIUM', label: 'Premium Fittings', position: 3, color: 'purple' },
+        { id: 'd2e3f4a5-b6c7-8901-bcde-f23456789015', value: 'GOLF', label: 'Golf Course View', position: 4, color: 'yellow' },
+      ],
+      name: 'usp2',
+    },
+    {
+      universalIdentifier: USP3_FIELD,
+      type: FieldType.SELECT,
+      label: 'USP 3',
+      description: 'Key selling point 3',
+      icon: 'IconStar',
+      options: [
+        { id: '6c1211f0-b0ec-47ca-b299-a568ed6f11dc', value: 'CORNER', label: 'Corner Unit', position: 0, color: 'blue' },
+        { id: 'ead00aa9-0e3c-4aed-ac79-e0ed9afac6a7', value: 'VASTU', label: 'Vastu Compliant', position: 1, color: 'green' },
+        { id: 'dd4f29a3-c484-4778-9ab7-51b72caa2dd7', value: 'RENOVATED', label: 'Recently Renovated', position: 2, color: 'orange' },
+        { id: '42973afd-0651-4be9-8eaf-6d863fca8af6', value: 'PREMIUM', label: 'Premium Fittings', position: 3, color: 'purple' },
+        { id: 'd8a23d1a-8f92-4442-bdf7-2cac02d5763e', value: 'GOLF', label: 'Golf Course View', position: 4, color: 'yellow' },
+      ],
+      name: 'usp3',
+    },
+    {
+      universalIdentifier: HOME_TYPE_FIELD,
+      type: FieldType.SELECT,
+      label: 'Home Type',
+      description: 'Resale, New, or Plot',
+      icon: 'IconHome',
+      defaultValue: `'${HomeType.RESALE}'`,
+      options: [
+        { id: '99862681-fbbc-48d4-bbf8-aaf6490140ae', value: HomeType.RESALE, label: 'Resale', position: 0, color: 'blue' },
+        { id: 'b705de10-28a1-4b87-83a8-661d73057922', value: HomeType.NEW, label: 'New', position: 1, color: 'green' },
+        { id: '1028b016-617d-4207-9665-f2b491cb5cce', value: HomeType.PLOT, label: 'Plot', position: 2, color: 'orange' },
+      ],
+      name: 'homeType',
+    },
+    {
+      universalIdentifier: OCCUPANCY_FIELD,
+      type: FieldType.SELECT,
+      label: 'Occupancy',
+      description: 'Current occupancy status',
+      icon: 'IconUser',
+      options: [
+        { id: '8341f53e-a21d-415e-a7c0-4d38ca2eaf0f', value: Occupancy.SELF, label: 'Self Occupied', position: 0, color: 'blue' },
+        { id: '5aa8ae8b-9acb-43c3-96c2-ac0742387caa', value: Occupancy.TENANT, label: 'Tenant Occupied', position: 1, color: 'green' },
+        { id: '77c85dbb-ccaa-445d-bede-1ebfdc59d1ad', value: Occupancy.VACANT, label: 'Vacant', position: 2, color: 'orange' },
+      ],
+      name: 'occupancy',
+    },
+    {
+      universalIdentifier: FURNISHING_FIELD,
+      type: FieldType.SELECT,
+      label: 'Furnishing',
+      description: 'Furnishing status',
+      icon: 'IconSofa',
+      options: [
+        { id: '537a984f-3790-47b0-acd2-d441f39ad699', value: Furnishing.UNFURNISHED, label: 'Unfurnished', position: 0, color: 'blue' },
+        { id: '823c98bb-674b-44c3-970c-32ee01f906d1', value: Furnishing.SEMI_FURNISHED, label: 'Semi Furnished', position: 1, color: 'green' },
+        { id: '8e7a08f4-1f87-4531-91f0-715434924ac1', value: Furnishing.FULLY_FURNISHED, label: 'Fully Furnished', position: 2, color: 'orange' },
+      ],
+      name: 'furnishing',
+    },
+    {
+      universalIdentifier: SELLER_FEES_FIELD,
+      type: FieldType.NUMBER,
+      label: 'Seller Fees %',
+      description: 'Commission percentage for seller',
+      icon: 'IconPercentage',
+      name: 'sellerFees',
+    },
+    {
+      universalIdentifier: PARKING_FIELD,
+      type: FieldType.NUMBER,
+      label: 'Parking',
+      description: 'Number of parking spots',
+      icon: 'IconCar',
+      name: 'parking',
+    },
+    {
+      universalIdentifier: BALCONY_FIELD,
+      type: FieldType.NUMBER,
+      label: 'Balcony',
+      description: 'Number of balconies',
+      icon: 'IconWindow',
+      name: 'balcony',
+    },
+    {
+      universalIdentifier: KEYS_WITH_FIELD,
+      type: FieldType.SELECT,
+      label: 'Keys With',
+      description: 'Who holds the property keys',
+      icon: 'IconKey',
+      options: [
+        { id: 'c7d8e9f0-a1b2-3456-abcd-789012345611', value: KeysWith.OWNER, label: 'Owner', position: 0, color: 'blue' },
+        { id: 'c7d8e9f0-a1b2-3456-abcd-789012345612', value: KeysWith.AGENT, label: 'Agent', position: 1, color: 'green' },
+        { id: 'c7d8e9f0-a1b2-3456-abcd-789012345613', value: KeysWith.SECURITY, label: 'Security', position: 2, color: 'orange' },
+      ],
+      name: 'keysWith',
+    },
+    {
+      universalIdentifier: INVENTORY_TYPE_FIELD,
+      type: FieldType.SELECT,
+      label: 'Inventory Type',
+      description: 'Listing exclusivity type',
+      icon: 'IconTag',
+      defaultValue: `'${InventoryType.OPEN}'`,
+      options: [
+        { id: 'd8e9f0a1-b2c3-4567-bcde-890123456711', value: InventoryType.EXCLUSIVE, label: 'Exclusive', position: 0, color: 'blue' },
+        { id: 'd8e9f0a1-b2c3-4567-bcde-890123456712', value: InventoryType.OPEN, label: 'Open', position: 1, color: 'green' },
+        { id: 'd8e9f0a1-b2c3-4567-bcde-890123456713', value: InventoryType.CO_BROKE, label: 'Co-broke', position: 2, color: 'orange' },
+      ],
+      name: 'inventoryType',
+    },
+    {
+      universalIdentifier: LISTING_TYPE_FIELD,
+      type: FieldType.SELECT,
+      label: 'Listing Type',
+      description: 'Reserve or Certified listing',
+      icon: 'IconBadge',
+      defaultValue: `'${ListingType.CERTIFIED}'`,
+      options: [
+        { id: 'c34a156c-f231-4745-828d-fc01fc712461', value: ListingType.RESERVE, label: 'Reserve', position: 0, color: 'purple' },
+        { id: 'a621d8f4-ff8a-49d1-980f-489545ac4a6f', value: ListingType.CERTIFIED, label: 'Certified', position: 1, color: 'green' },
+      ],
+      name: 'listingType',
+    },
+    {
+      universalIdentifier: JUMBO_URL_FIELD,
+      type: FieldType.TEXT,
+      label: 'Jumbo Listing URL',
+      description: 'Website listing link',
+      icon: 'IconLink',
+      name: 'jumboUrl',
+    },
+    {
+      universalIdentifier: HOUSING_URL_FIELD,
+      type: FieldType.TEXT,
+      label: 'Housing.com URL',
+      description: 'Housing.com listing URL',
+      icon: 'IconLink',
+      name: 'housingUrl',
+    },
+    {
+      universalIdentifier: NINETYNINE_ACRES_URL_FIELD,
+      type: FieldType.TEXT,
+      label: '99Acres URL',
+      description: '99Acres listing URL',
+      icon: 'IconLink',
+      name: 'ninetyNineAcresUrl',
+    },
+    {
+      universalIdentifier: HOUSING_ID_FIELD,
+      type: FieldType.TEXT,
+      label: 'Housing ID',
+      description: 'External Housing.com platform ID',
+      icon: 'IconHash',
+      name: 'housingId',
+    },
+    {
+      universalIdentifier: NINETYNINE_ACRES_ID_FIELD,
+      type: FieldType.TEXT,
+      label: '99Acres ID',
+      description: 'External 99Acres platform ID',
+      icon: 'IconHash',
+      name: 'ninetyNineAcresId',
+    },
+    {
+      universalIdentifier: GTM_READY_FIELD,
+      type: FieldType.BOOLEAN,
+      label: 'GTM Ready',
+      description: 'Ready for marketing',
+      icon: 'IconCheck',
+      name: 'gtmReady',
+    },
+    {
+      universalIdentifier: WEBSITE_LIVE_DATE_FIELD,
+      type: FieldType.DATE,
+      label: 'Website Live Date',
+      description: 'When published on website',
+      icon: 'IconCalendar',
+      name: 'websiteLiveDate',
+    },
+    {
+      universalIdentifier: HID_FIELD,
+      type: FieldType.TEXT,
+      label: 'HID',
+      description: 'Internal housing ID',
+      icon: 'IconHash',
+      name: 'hid',
+    },
+    {
+      universalIdentifier: LISTING_SLUG_FIELD,
+      type: FieldType.TEXT,
+      label: 'Listing Slug',
+      description: 'SEO-friendly URL slug',
+      icon: 'IconLink',
+      name: 'listingSlug',
     },
   ],
 });
