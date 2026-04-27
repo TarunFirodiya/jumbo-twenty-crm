@@ -35,6 +35,10 @@ export const SELLER_DROP_REASON_FIELD = '601e02de-9ee6-4328-89b6-3464577833ba';
 export const SELLER_EXPECTED_PRICE_FIELD = '5a93ecd2-f26e-48a0-9578-fe6b307f1a72';
 export const SELLER_TIMELINE_FIELD = '706cfa49-503a-468f-a2fa-c5c2b79db8fd';
 export const SELLER_PROPERTY_ADDRESS_FIELD = '6bdf8162-1d95-4995-9619-a94feb638eb4';
+export const SELLER_PROPERTY_FIELD = '1b54e5ce-be1c-4616-8cb5-5a3ce311ebf6';
+export const SELLER_MOTIVATION_FIELD = '357f3bb8-f18b-416c-891d-59e609838e8c';
+export const SELLER_HOW_HEARD_FIELD = '370f96e3-cc5d-4a8a-bf94-4fe247ee444c';
+export const SELLER_IS_OWNER_FIELD = '4e83b3a3-8694-44f5-a12e-761264afb698';
 export const SELLER_NOTES_FIELD = '1f784d96-986c-486e-83bf-7ce62d6c3abc';
 
 export default defineObject({
@@ -65,7 +69,7 @@ export default defineObject({
         { id: '900cbcb4-93db-4913-be7e-828386a06f75', value: SellerStage.NEW_ENQUIRY, label: 'New Enquiry', position: 0, color: 'blue' },
         { id: '044656c6-c55b-4700-a6a5-763c6ab8c7e2', value: SellerStage.PROPERTY_EVALUATION, label: 'Property Evaluation', position: 1, color: 'yellow' },
         { id: 'aea77b47-e9d9-4bd8-b341-7bc23582b8b1', value: SellerStage.LISTING_AGREEMENT_SIGNED, label: 'Listing Agreement Signed', position: 2, color: 'purple' },
-        { id: '393b218a-b818-4f5f-bad0-3a52484a3d29', value: SellerStage.MARKETING_LIVE, label: 'Marketing Live', position: 3, color: 'cyan' },
+        { id: '393b218a-b818-4f5f-bad0-3a52484a3d29', value: SellerStage.MARKETING_LIVE, label: 'Marketing Live', position: 3, color: 'blue' },
         { id: '6e658cef-667c-4f5a-a36e-c48aaaaea545', value: SellerStage.UNDER_OFFER, label: 'Under Offer', position: 4, color: 'orange' },
         { id: '8de6467d-03fe-4f71-8517-74b168b7fffa', value: SellerStage.SOLD, label: 'Sold', position: 5, color: 'green' },
         { id: '7f29dab8-1a2c-40a9-b8a2-2193d9389f9e', value: SellerStage.ON_HOLD, label: 'On Hold', position: 6, color: 'gray' },
@@ -116,9 +120,50 @@ export default defineObject({
       universalIdentifier: SELLER_PROPERTY_ADDRESS_FIELD,
       type: FieldType.ADDRESS,
       label: 'Property Address',
-      description: 'Address of the property being sold',
+      description: 'Address of the property being sold (free text for initial capture)',
       icon: 'IconMapPin',
       name: 'propertyAddress',
+    },
+    {
+      universalIdentifier: SELLER_MOTIVATION_FIELD,
+      type: FieldType.SELECT,
+      label: 'Motivation',
+      icon: 'IconHeartHandshake',
+      isNullable: true,
+      defaultValue: null,
+      options: [
+        { id: 'c33dc5eb-a844-4718-bcfc-b3a1dc42e408', value: 'UPGRADE', label: 'Upgrade', position: 0, color: 'blue' },
+        { id: '61851309-e50e-41d2-8846-9afaf22525f4', value: 'DOWNGRADE', label: 'Downgrade', position: 1, color: 'green' },
+        { id: '8285987b-6431-4fdc-8d82-9eef15d5f098', value: 'INVESTMENT', label: 'Investment', position: 2, color: 'orange' },
+        { id: 'a1505dc8-4263-4476-aa03-dc58a70ae6e4', value: 'RELOCATION', label: 'Relocation', position: 3, color: 'purple' },
+        { id: '4f59a921-84e7-40f2-a706-d6300001fc01', value: 'FINANCIAL', label: 'Financial', position: 4, color: 'red' },
+        { id: 'f82b77c3-cdec-472a-b95a-0cc142e7c26f', value: 'INHERITANCE', label: 'Inheritance', position: 5, color: 'gray' },
+      ],
+      name: 'motivation',
+    },
+    {
+      universalIdentifier: SELLER_HOW_HEARD_FIELD,
+      type: FieldType.SELECT,
+      label: 'How Did They Hear About Us',
+      icon: 'IconVolume',
+      isNullable: true,
+      defaultValue: null,
+      options: [
+        { id: '2f738798-854e-488e-93fc-180497e8ebfb', value: 'REFERRAL', label: 'Referral', position: 0, color: 'blue' },
+        { id: 'b7e5997f-2c49-410d-b915-177d1d5f200a', value: 'SOCIAL_MEDIA', label: 'Social Media', position: 1, color: 'green' },
+        { id: '9ffd9828-e9ad-4ccf-bb28-cb4ce5e775a5', value: 'PORTAL', label: 'Property Portal', position: 2, color: 'orange' },
+        { id: '01deeb60-4367-4983-8302-f1d785a71069', value: 'WALK_IN', label: 'Walk In', position: 3, color: 'purple' },
+        { id: '6b539a56-2a57-49d4-8795-f55600e6278c', value: 'ADVERTISING', label: 'Advertising', position: 4, color: 'red' },
+      ],
+      name: 'howHeard',
+    },
+    {
+      universalIdentifier: SELLER_IS_OWNER_FIELD,
+      type: FieldType.BOOLEAN,
+      label: 'Is Owner',
+      description: 'Is this person the legal owner of the property?',
+      icon: 'IconUserCheck',
+      name: 'isOwner',
     },
     {
       universalIdentifier: SELLER_NOTES_FIELD,

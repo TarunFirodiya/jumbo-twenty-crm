@@ -115,6 +115,7 @@ export const GTM_READY_FIELD = '31dc3f0d-7753-4f88-95e2-6454c7d661eb';
 export const WEBSITE_LIVE_DATE_FIELD = 'e27738ae-9839-47c6-b13c-82d6a80e5aa6';
 export const HID_FIELD = '81136f11-45f0-4990-b380-e426cb6b8582';
 export const LISTING_SLUG_FIELD = '757aff7a-a971-43fb-9a9c-cc58ee456a7c';
+export const PROPERTY_ON_HOLD_FIELD = 'eef6156c-5a87-4118-98e5-e3a416e0926d';
 export const LISTING_TYPE_FIELD = '8e430749-85d3-4e90-a306-78acb8acba90';
 
 export default defineObject({
@@ -549,6 +550,14 @@ export default defineObject({
       description: 'SEO-friendly URL slug',
       icon: 'IconLink',
       name: 'listingSlug',
+    },
+    {
+      universalIdentifier: PROPERTY_ON_HOLD_FIELD,
+      type: FieldType.BOOLEAN,
+      label: 'On Hold',
+      description: 'Temporarily off market',
+      icon: 'IconPause',
+      name: 'onHold',
     },
   ],
 });
