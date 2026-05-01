@@ -22,6 +22,14 @@ enum BuyerDropReason {
   WENT_WITH_COMPETITOR = 'WENT_WITH_COMPETITOR',
 }
 
+enum LeadStage {
+  FRESH_LEAD = 'FRESH_LEAD',
+  ACTIVE_VISITOR = 'ACTIVE_VISITOR',
+  AT_RISK_VISITOR = 'AT_RISK_VISITOR',
+  AT_RISK_LEAD = 'AT_RISK_LEAD',
+  INACTIVE = 'INACTIVE',
+}
+
 export const BUYER_UNIVERSAL_IDENTIFIER = 'c85672f9-31e2-4f14-a241-e5cc1b4d6289';
 export const BUYER_NAME_FIELD = '70a817ae-74b2-433c-85e3-06c930b7bf23';
 export const BUYER_STAGE_FIELD = '65a6f278-f8b0-47f0-b88d-282b98407b0d';
@@ -43,6 +51,17 @@ export const BUYER_LOAN_REQUIRED_FIELD = '1abd3561-8d5d-4da8-8f38-6d6eb764dc44';
 export const BUYER_MOVE_IN_DATE_FIELD = '14f923f5-114e-4fd5-b8f1-d487a73fbf7c';
 export const BUYER_MAX_MAINTENANCE_FIELD = '6949cf14-5481-4276-982b-6b654e0d0cc2';
 export const BUYER_NOTES_FIELD = '37103533-24ed-4fda-977b-94e8dd24d6bf';
+export const BUYER_PHONE_FIELD = '598a9ea5-7330-41d7-a435-4a363732e329';
+export const BUYER_EMAIL_FIELD = 'b48edbf7-3174-4ad0-a670-5e231ed8d89d';
+export const BUYER_LEAD_STAGE_FIELD = '2fc48cea-8251-443a-8c1e-5491f3c510c8';
+export const BUYER_NEXT_FOLLOW_UP_FIELD = '5739d435-9bc5-409a-8ea7-e9b9298d7deb';
+export const BUYER_QUALIFIED_FIELD = '2c09db33-0384-452c-bfa9-24ebf9e49141';
+export const BUYER_LANDMARK_FIELD = 'ad3c5e69-dfd6-4be0-adcf-023c6b5fb4e7';
+export const BUYER_MUST_HAVES_FIELD = '3f7f4009-3cdb-425c-a0df-36ca3c734447';
+export const BUYER_PREFERRED_BUILDINGS_FIELD = 'f434fd4e-52e3-488d-b955-0b142f3576eb';
+export const BUYER_PIPELINE_FIELD = '2dae04dc-57e6-4843-8639-b1104214769c';
+export const BUYER_HOUSEHOLD_ID_FIELD = 'f164d974-3b7d-47af-a6ad-9878d3b99d9c';
+export const BUYER_LAST_VISIT_DATE_FIELD = '59dbaa53-4f6c-41ed-97f1-ace6a7f9032e';
 
 export default defineObject({
   universalIdentifier: BUYER_UNIVERSAL_IDENTIFIER,
@@ -273,6 +292,101 @@ export default defineObject({
       description: 'Buyer notes and requirements',
       icon: 'IconNotes',
       name: 'notes',
+    },
+    {
+      universalIdentifier: BUYER_PHONE_FIELD,
+      type: FieldType.TEXT,
+      label: 'Phone',
+      description: 'Buyer phone number',
+      icon: 'IconPhone',
+      name: 'phone',
+    },
+    {
+      universalIdentifier: BUYER_EMAIL_FIELD,
+      type: FieldType.TEXT,
+      label: 'Email',
+      description: 'Buyer email address',
+      icon: 'IconMail',
+      name: 'email',
+    },
+    {
+      universalIdentifier: BUYER_LEAD_STAGE_FIELD,
+      type: FieldType.SELECT,
+      label: 'Lead Stage',
+      description: 'Lead engagement stage (manual for now)',
+      icon: 'IconStatusChange',
+      options: [
+        { id: 'f5f3fb34-e7fe-4ed6-aadd-54a271b3a89c', value: LeadStage.FRESH_LEAD, label: 'Fresh Lead', position: 0, color: 'blue' },
+        { id: '2857cbb0-10b5-4acd-80db-0dbde7f02f4e', value: LeadStage.ACTIVE_VISITOR, label: 'Active Visitor', position: 1, color: 'green' },
+        { id: 'efe53267-2cae-4e18-a842-968ac973b760', value: LeadStage.AT_RISK_VISITOR, label: 'At Risk Visitor', position: 2, color: 'orange' },
+        { id: '4c4bbe2f-678b-4c02-abcc-e035738208c1', value: LeadStage.AT_RISK_LEAD, label: 'At Risk Lead', position: 3, color: 'red' },
+        { id: '4048629d-0970-43cc-8614-a9e41ac826f0', value: LeadStage.INACTIVE, label: 'Inactive', position: 4, color: 'gray' },
+      ],
+      name: 'leadStage',
+    },
+    {
+      universalIdentifier: BUYER_NEXT_FOLLOW_UP_FIELD,
+      type: FieldType.DATE_TIME,
+      label: 'Next Follow Up',
+      description: 'When to follow up next',
+      icon: 'IconCalendar',
+      name: 'nextFollowUp',
+    },
+    {
+      universalIdentifier: BUYER_QUALIFIED_FIELD,
+      type: FieldType.BOOLEAN,
+      label: 'Qualified',
+      description: 'Is this buyer qualified',
+      icon: 'IconCheck',
+      name: 'qualified',
+    },
+    {
+      universalIdentifier: BUYER_LANDMARK_FIELD,
+      type: FieldType.TEXT,
+      label: 'Landmark Preference',
+      description: 'Preferred landmark or area',
+      icon: 'IconMapPin',
+      name: 'landmark',
+    },
+    {
+      universalIdentifier: BUYER_MUST_HAVES_FIELD,
+      type: FieldType.RICH_TEXT,
+      label: 'Must Haves',
+      description: 'Buyer must-have requirements',
+      icon: 'IconListCheck',
+      name: 'mustHaves',
+    },
+    {
+      universalIdentifier: BUYER_PREFERRED_BUILDINGS_FIELD,
+      type: FieldType.TEXT,
+      label: 'Preferred Buildings',
+      description: 'Specific buildings buyer prefers',
+      icon: 'IconBuilding',
+      name: 'preferredBuildings',
+    },
+    {
+      universalIdentifier: BUYER_PIPELINE_FIELD,
+      type: FieldType.BOOLEAN,
+      label: 'Pipeline',
+      description: 'Active in pipeline',
+      icon: 'IconTrendingUp',
+      name: 'pipeline',
+    },
+    {
+      universalIdentifier: BUYER_HOUSEHOLD_ID_FIELD,
+      type: FieldType.TEXT,
+      label: 'Household ID',
+      description: 'Family grouping ID',
+      icon: 'IconUsers',
+      name: 'householdId',
+    },
+    {
+      universalIdentifier: BUYER_LAST_VISIT_DATE_FIELD,
+      type: FieldType.DATE,
+      label: 'Last Visit Date',
+      description: 'Date of last property visit',
+      icon: 'IconCalendar',
+      name: 'lastVisitDate',
     },
   ],
 });

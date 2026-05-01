@@ -71,6 +71,42 @@ enum ListingType {
   CERTIFIED = 'CERTIFIED',
 }
 
+enum BalconyView {
+  POOL = 'POOL',
+  GARDEN = 'GARDEN',
+  LAKE = 'LAKE',
+  MAIN_ROAD = 'MAIN_ROAD',
+  AMENITIES = 'AMENITIES',
+  BUILDING = 'BUILDING',
+  GREEN_LANDSCAPE = 'GREEN_LANDSCAPE',
+}
+
+enum PropertyLifecycleStatus {
+  NA = 'NA',
+  PROPOSAL_SENT = 'PROPOSAL_SENT',
+  INSPECTION_PENDING = 'INSPECTION_PENDING',
+  CATALOGUE_PENDING = 'CATALOGUE_PENDING',
+  LIVE = 'LIVE',
+}
+
+enum OffboardingReason {
+  SOLD_BY_OWNER = 'SOLD_BY_OWNER',
+  SOLD_BY_BROKER = 'SOLD_BY_BROKER',
+  PLAN_CANCELED = 'PLAN_CANCELED',
+  SOLD_BY_JUMBO = 'SOLD_BY_JUMBO',
+  SOLD_BY_CP = 'SOLD_BY_CP',
+  RENTED_OUT = 'RENTED_OUT',
+  BROKER_UNIT = 'BROKER_UNIT',
+  OWNER_NON_RESPONSIVE = 'OWNER_NON_RESPONSIVE',
+}
+
+enum SellerUrgency {
+  LESS_THAN_1M = 'LESS_THAN_1M',
+  LESS_THAN_3M = 'LESS_THAN_3M',
+  LESS_THAN_6M = 'LESS_THAN_6M',
+  BEST_PRICE = 'BEST_PRICE',
+}
+
 export const PROPERTY_UNIVERSAL_IDENTIFIER = '32e135d0-16b0-4c08-a90f-d4505931bae0';
 
 // Existing field IDs
@@ -117,6 +153,23 @@ export const HID_FIELD = '81136f11-45f0-4990-b380-e426cb6b8582';
 export const LISTING_SLUG_FIELD = '757aff7a-a971-43fb-9a9c-cc58ee456a7c';
 export const PROPERTY_ON_HOLD_FIELD = 'eef6156c-5a87-4118-98e5-e3a416e0926d';
 export const LISTING_TYPE_FIELD = '8e430749-85d3-4e90-a306-78acb8acba90';
+export const PROPERTY_FLAT_NUMBER_FIELD = '70a9d0c7-8230-4571-9fa4-b5878a60272f';
+export const PROPERTY_BALCONY_VIEW_1_FIELD = '2ec079e9-9ba8-4fbb-8110-02b1e46f903a';
+export const PROPERTY_BALCONY_VIEW_2_FIELD = '0a8f73b9-86a7-4ca5-a120-5e71a5fc6d10';
+export const PROPERTY_BALCONY_VIEW_3_FIELD = '453b53df-67a4-4c94-8eaa-887df421e9e4';
+export const PROPERTY_BALCONY_VIEW_4_FIELD = 'd0e5d87a-0938-4e92-90eb-c98fa7e0b31c';
+export const PROPERTY_ORIGINAL_ASK_PRICE_FIELD = '24ddb3e8-f601-427e-8d9c-c1ee98c79e9c';
+export const PROPERTY_SOURCE_PRICE_FIELD = '604e4ba1-e781-4c6c-91f3-de789373d9f7';
+export const PROPERTY_LATEST_PRICE_FIELD = '4b8653ab-323c-45df-a1c0-570ec405856b';
+export const PROPERTY_PRICE_PER_SQFT_FIELD = '31f49efe-4dc5-4ab7-880b-a765546ecea4';
+export const PROPERTY_LPG_FIELD = 'a60dde67-f85c-4a4e-82aa-27d3ed63fc0b';
+export const PROPERTY_OC_RECEIVED_FIELD = 'f436500b-cfa8-4fc7-a973-32c87c164a38';
+export const PROPERTY_SELLER_URGENCY_FIELD = 'a00eb339-493b-44eb-988c-ab50d2ffe355';
+export const PROPERTY_PROPERTY_STATUS_FIELD = '9015d981-17f3-49c6-93bb-4eff52800ed9';
+export const PROPERTY_OFFBOARDING_FIELD = 'e0af0693-1c87-43f6-b0dd-af2cebb554b8';
+export const PROPERTY_OFFBOARDING_REASON_FIELD = '9a8d074d-0f5a-413a-8aba-30ca5cd90385';
+export const PROPERTY_SELLING_PRICE_FIELD = '4f315635-9fa4-4f88-ae3d-b16ca73d30a1';
+export const PROPERTY_OFFBOARDING_DATE_FIELD = '91bd0e9a-d80d-48a5-8f7d-4980692ff0d7';
 
 export default defineObject({
   universalIdentifier: PROPERTY_UNIVERSAL_IDENTIFIER,
@@ -558,6 +611,202 @@ export default defineObject({
       description: 'Temporarily off market',
       icon: 'IconPause',
       name: 'onHold',
+    },
+    {
+      universalIdentifier: PROPERTY_FLAT_NUMBER_FIELD,
+      type: FieldType.TEXT,
+      label: 'Flat Number',
+      description: 'Unit/flat number',
+      icon: 'IconHash',
+      name: 'flatNumber',
+    },
+    {
+      universalIdentifier: PROPERTY_BALCONY_VIEW_1_FIELD,
+      type: FieldType.SELECT,
+      label: 'Balcony View 1',
+      description: 'Primary balcony view',
+      icon: 'IconEye',
+      options: [
+        { id: 'c020e291-5519-4f8d-8ea7-7392b0f64b63', value: BalconyView.POOL, label: 'Pool', position: 0, color: 'blue' },
+        { id: '63753d4a-00ec-465a-a640-8eb0d8fe0c71', value: BalconyView.GARDEN, label: 'Garden', position: 1, color: 'green' },
+        { id: 'cf82cb2c-c2ca-488a-a94c-379ba4e6c3b0', value: BalconyView.LAKE, label: 'Lake', position: 2, color: 'blue' },
+        { id: '35fce7c0-561b-469e-98c3-49c94aab307a', value: BalconyView.MAIN_ROAD, label: 'Main Road', position: 3, color: 'orange' },
+        { id: '00015010-b257-4879-871e-324bcde80517', value: BalconyView.AMENITIES, label: 'Amenities', position: 4, color: 'purple' },
+        { id: '2cb7b1b8-8e0f-4f10-a506-dfe12dfdc762', value: BalconyView.BUILDING, label: 'Building', position: 5, color: 'gray' },
+        { id: '3a0f3d7f-ab92-4110-acc9-8e065ca644d3', value: BalconyView.GREEN_LANDSCAPE, label: 'Green Landscape', position: 6, color: 'green' },
+      ],
+      name: 'balconyView1',
+    },
+    {
+      universalIdentifier: PROPERTY_BALCONY_VIEW_2_FIELD,
+      type: FieldType.SELECT,
+      label: 'Balcony View 2',
+      description: 'Secondary balcony view',
+      icon: 'IconEye',
+      options: [
+        { id: '8df163e8-a786-4b03-b04d-353bdd359cc7', value: BalconyView.POOL, label: 'Pool', position: 0, color: 'blue' },
+        { id: '472b4ba0-1e97-4c27-8a81-7c10bd74fdb1', value: BalconyView.GARDEN, label: 'Garden', position: 1, color: 'green' },
+        { id: '6d336443-f6b9-4bf1-a22f-79b4ea4b3740', value: BalconyView.LAKE, label: 'Lake', position: 2, color: 'blue' },
+        { id: '9bb0f670-38f3-4eec-9e35-4726a0dbea6f', value: BalconyView.MAIN_ROAD, label: 'Main Road', position: 3, color: 'orange' },
+        { id: '310dc074-0bf6-431a-b162-d14299d84548', value: BalconyView.AMENITIES, label: 'Amenities', position: 4, color: 'purple' },
+        { id: '8ce68c60-1fca-44d8-afc8-844b93e2608e', value: BalconyView.BUILDING, label: 'Building', position: 5, color: 'gray' },
+        { id: '7bd73b72-c5a1-452a-88a2-d6df0408bf98', value: BalconyView.GREEN_LANDSCAPE, label: 'Green Landscape', position: 6, color: 'green' },
+      ],
+      name: 'balconyView2',
+    },
+    {
+      universalIdentifier: PROPERTY_BALCONY_VIEW_3_FIELD,
+      type: FieldType.SELECT,
+      label: 'Balcony View 3',
+      description: 'Tertiary balcony view',
+      icon: 'IconEye',
+      options: [
+        { id: 'da60d6f3-936a-4fff-8ace-b789297ca1c1', value: BalconyView.POOL, label: 'Pool', position: 0, color: 'blue' },
+        { id: 'd0fc34fe-d021-4c2e-b189-01e276fee645', value: BalconyView.GARDEN, label: 'Garden', position: 1, color: 'green' },
+        { id: 'ffa6e486-8c22-4bf1-bb60-5cb9259c36f0', value: BalconyView.LAKE, label: 'Lake', position: 2, color: 'blue' },
+        { id: '3274a47b-1518-4cab-bcaf-4a17ca7941cf', value: BalconyView.MAIN_ROAD, label: 'Main Road', position: 3, color: 'orange' },
+        { id: '59ae2de2-31f9-4406-b1e4-37de325fc2f2', value: BalconyView.AMENITIES, label: 'Amenities', position: 4, color: 'purple' },
+        { id: '2379f574-f9a9-4233-816a-d20c247d6620', value: BalconyView.BUILDING, label: 'Building', position: 5, color: 'gray' },
+        { id: '6d2077d7-2e2a-4f31-830d-de1c29176839', value: BalconyView.GREEN_LANDSCAPE, label: 'Green Landscape', position: 6, color: 'green' },
+      ],
+      name: 'balconyView3',
+    },
+    {
+      universalIdentifier: PROPERTY_BALCONY_VIEW_4_FIELD,
+      type: FieldType.SELECT,
+      label: 'Balcony View 4',
+      description: 'Quaternary balcony view',
+      icon: 'IconEye',
+      options: [
+        { id: '1b44c026-18de-4a52-a430-e973b6fc7928', value: BalconyView.POOL, label: 'Pool', position: 0, color: 'blue' },
+        { id: '8e319798-6482-4ac3-9e69-11ef07b4d4b3', value: BalconyView.GARDEN, label: 'Garden', position: 1, color: 'green' },
+        { id: '110ff187-5cf4-4e83-bbdb-2f90d809ff63', value: BalconyView.LAKE, label: 'Lake', position: 2, color: 'blue' },
+        { id: '22708911-431f-4595-bf57-f5a39c472df0', value: BalconyView.MAIN_ROAD, label: 'Main Road', position: 3, color: 'orange' },
+        { id: '691521bf-b864-4765-a869-43b55bb594d6', value: BalconyView.AMENITIES, label: 'Amenities', position: 4, color: 'purple' },
+        { id: '716a8d53-9688-4184-a0b3-1d16f2bad235', value: BalconyView.BUILDING, label: 'Building', position: 5, color: 'gray' },
+        { id: '53b27ba6-88ac-4f73-9e8a-e30c9955872b', value: BalconyView.GREEN_LANDSCAPE, label: 'Green Landscape', position: 6, color: 'green' },
+      ],
+      name: 'balconyView4',
+    },
+    {
+      universalIdentifier: PROPERTY_ORIGINAL_ASK_PRICE_FIELD,
+      type: FieldType.CURRENCY,
+      label: 'Original Ask Price',
+      description: 'Initial seller asking price',
+      icon: 'IconCurrencyRupee',
+      name: 'originalAskPrice',
+    },
+    {
+      universalIdentifier: PROPERTY_SOURCE_PRICE_FIELD,
+      type: FieldType.CURRENCY,
+      label: 'Source Price',
+      description: 'Price from classified/source',
+      icon: 'IconCurrencyRupee',
+      name: 'sourcePrice',
+    },
+    {
+      universalIdentifier: PROPERTY_LATEST_PRICE_FIELD,
+      type: FieldType.CURRENCY,
+      label: 'Latest Price',
+      description: 'Most recent price (manual for now)',
+      icon: 'IconCurrencyRupee',
+      name: 'latestPrice',
+    },
+    {
+      universalIdentifier: PROPERTY_PRICE_PER_SQFT_FIELD,
+      type: FieldType.CURRENCY,
+      label: 'Price Per Sqft',
+      description: 'Price per square foot (manual for now)',
+      icon: 'IconCurrencyRupee',
+      name: 'pricePerSqft',
+    },
+    {
+      universalIdentifier: PROPERTY_LPG_FIELD,
+      type: FieldType.BOOLEAN,
+      label: 'LPG',
+      description: 'LPG connection available',
+      icon: 'IconFlame',
+      name: 'lpg',
+    },
+    {
+      universalIdentifier: PROPERTY_OC_RECEIVED_FIELD,
+      type: FieldType.BOOLEAN,
+      label: 'OC Received',
+      description: 'Occupancy certificate received',
+      icon: 'IconCertificate',
+      name: 'ocReceived',
+    },
+    {
+      universalIdentifier: PROPERTY_SELLER_URGENCY_FIELD,
+      type: FieldType.SELECT,
+      label: 'Seller Urgency',
+      description: 'How urgent is the seller',
+      icon: 'IconClock',
+      options: [
+        { id: '3a456d37-9221-4817-92f0-dd183787080a', value: SellerUrgency.LESS_THAN_1M, label: '< 1 month', position: 0, color: 'red' },
+        { id: '2faa207e-0e75-4871-ba43-d51a43b1deb0', value: SellerUrgency.LESS_THAN_3M, label: '< 3 months', position: 1, color: 'orange' },
+        { id: '59c9a5c7-1754-4ad4-b757-a85919dd3741', value: SellerUrgency.LESS_THAN_6M, label: '< 6 months', position: 2, color: 'yellow' },
+        { id: 'cc05cf49-aa5d-496b-a534-7c3d434b8ee2', value: SellerUrgency.BEST_PRICE, label: 'Best Price Awaited', position: 3, color: 'green' },
+      ],
+      name: 'sellerUrgency',
+    },
+    {
+      universalIdentifier: PROPERTY_PROPERTY_STATUS_FIELD,
+      type: FieldType.SELECT,
+      label: 'Property Status',
+      description: 'Lifecycle status',
+      icon: 'IconStatusChange',
+      defaultValue: `'${PropertyLifecycleStatus.NA}'`,
+      options: [
+        { id: '94dc4099-5bfb-4039-8c1c-5e50f7156e5f', value: PropertyLifecycleStatus.NA, label: 'NA', position: 0, color: 'gray' },
+        { id: 'd7ebd1bb-ee54-4cc0-8828-eda5e3c3811c', value: PropertyLifecycleStatus.PROPOSAL_SENT, label: 'Proposal Sent', position: 1, color: 'blue' },
+        { id: '1c44f418-e660-4b91-ae75-c8808ea49361', value: PropertyLifecycleStatus.INSPECTION_PENDING, label: 'Inspection Pending', position: 2, color: 'yellow' },
+        { id: '07c1169e-2401-46d4-9a76-46d41720a878', value: PropertyLifecycleStatus.CATALOGUE_PENDING, label: 'Catalogue Pending', position: 3, color: 'orange' },
+        { id: '5f719fc9-30e0-442a-b8f9-eca7b023a8af', value: PropertyLifecycleStatus.LIVE, label: 'Live', position: 4, color: 'green' },
+      ],
+      name: 'propertyStatus',
+    },
+    {
+      universalIdentifier: PROPERTY_OFFBOARDING_FIELD,
+      type: FieldType.BOOLEAN,
+      label: 'Offboarding',
+      description: 'Property is being offboarded',
+      icon: 'IconLogout',
+      name: 'offboarding',
+    },
+    {
+      universalIdentifier: PROPERTY_OFFBOARDING_REASON_FIELD,
+      type: FieldType.SELECT,
+      label: 'Offboarding Reason',
+      description: 'Why the property is being offboarded',
+      icon: 'IconX',
+      options: [
+        { id: '145e61a0-833e-4160-ad39-bb7396506c21', value: OffboardingReason.SOLD_BY_OWNER, label: 'Sold by Owner', position: 0, color: 'red' },
+        { id: 'b10e7bf0-fd9d-43a2-822c-d1076a6d7aa1', value: OffboardingReason.SOLD_BY_BROKER, label: 'Sold by Broker', position: 1, color: 'orange' },
+        { id: '32af2ce3-6302-4c07-849d-9367e6884603', value: OffboardingReason.PLAN_CANCELED, label: 'Plan Canceled', position: 2, color: 'gray' },
+        { id: 'fb2396e4-b7b7-485a-b524-28aaa8559929', value: OffboardingReason.SOLD_BY_JUMBO, label: 'Sold by Jumbo', position: 3, color: 'green' },
+        { id: '52d56f91-2559-41ea-8d91-53ef574cd1ac', value: OffboardingReason.SOLD_BY_CP, label: 'Sold by CP', position: 4, color: 'blue' },
+        { id: '40adbf08-59c0-4f41-acd4-36948fe9a576', value: OffboardingReason.RENTED_OUT, label: 'Rented Out', position: 5, color: 'purple' },
+        { id: '83d56f48-30ce-48f4-b0a3-d7e79bf4e9b5', value: OffboardingReason.BROKER_UNIT, label: 'Broker Unit', position: 6, color: 'yellow' },
+        { id: 'c7afb3be-ec8e-4f30-ad5d-d3fda865cf97', value: OffboardingReason.OWNER_NON_RESPONSIVE, label: 'Owner Non Responsive', position: 7, color: 'gray' },
+      ],
+      name: 'offboardingReason',
+    },
+    {
+      universalIdentifier: PROPERTY_SELLING_PRICE_FIELD,
+      type: FieldType.CURRENCY,
+      label: 'Selling Price',
+      description: 'Final selling price',
+      icon: 'IconCurrencyRupee',
+      name: 'sellingPrice',
+    },
+    {
+      universalIdentifier: PROPERTY_OFFBOARDING_DATE_FIELD,
+      type: FieldType.DATE_TIME,
+      label: 'Offboarding Date',
+      description: 'When property was offboarded',
+      icon: 'IconCalendarOff',
+      name: 'offboardingDate',
     },
   ],
 });

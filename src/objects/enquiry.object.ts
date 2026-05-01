@@ -25,6 +25,22 @@ enum EnquiryStatus {
   DROPPED = 'DROPPED',
 }
 
+enum EnquirySourceDetail {
+  NINETYNINE_ACRES = 'NINETYNINE_ACRES',
+  HOUSING = 'HOUSING',
+  MAGICBRICKS = 'MAGICBRICKS',
+  WEBSITE = 'WEBSITE',
+  MYGATE = 'MYGATE',
+}
+
+enum EnquiryStatusDetail {
+  CONTACTED = 'CONTACTED',
+  RNR = 'RNR',
+  NEW_LEAD = 'NEW_LEAD',
+  MORE_OPTIONS_REQUESTED = 'MORE_OPTIONS_REQUESTED',
+  DROPPED = 'DROPPED',
+}
+
 export const ENQUIRY_UNIVERSAL_IDENTIFIER = 'e718ab0c-b6d3-456c-a496-c8d588393820';
 export const ENQUIRY_NUMBER_FIELD = '1c50de94-33b1-4076-8864-b38282dc4057';
 export const ENQUIRY_SOURCE_FIELD = '3812cdf1-dcc6-48c9-a36d-ea908038f980';
@@ -33,6 +49,8 @@ export const ENQUIRY_STATUS_FIELD = 'c8a4a4ac-78e3-46df-9988-01f78fba34d4';
 export const ENQUIRY_BUDGET_FIELD = 'cceecd1c-0aaa-4a37-a3d1-25724a862fa0';
 export const ENQUIRY_PREF_ZONES_FIELD = 'a08126a2-4686-4d70-b464-74af2cf58684';
 export const ENQUIRY_NOTES_FIELD = '21536df2-1145-4205-ac24-62dcd6264216';
+export const ENQUIRY_SOURCE_DETAIL_FIELD = 'af52ce0d-12f7-47c8-8db2-0c2d4ee4435e';
+export const ENQUIRY_STATUS_DETAIL_FIELD = 'a088d1b2-7b6c-4cd6-b3ad-95b0d2995f74';
 
 export default defineObject({
   universalIdentifier: ENQUIRY_UNIVERSAL_IDENTIFIER,
@@ -125,6 +143,36 @@ export default defineObject({
       description: 'Enquiry details and context',
       icon: 'IconNotes',
       name: 'notes',
+    },
+    {
+      universalIdentifier: ENQUIRY_SOURCE_DETAIL_FIELD,
+      type: FieldType.SELECT,
+      label: 'Source Detail',
+      description: 'Specific source platform',
+      icon: 'IconSource',
+      options: [
+        { id: '10ff0e75-d702-4cd4-9065-7d6ed1348dbd', value: EnquirySourceDetail.NINETYNINE_ACRES, label: '99Acres', position: 0, color: 'blue' },
+        { id: 'ad68517f-1b5c-4fef-bbf4-42783a7cf384', value: EnquirySourceDetail.HOUSING, label: 'Housing', position: 1, color: 'green' },
+        { id: '9b36f55b-9208-4bca-8146-eab20fe07105', value: EnquirySourceDetail.MAGICBRICKS, label: 'MagicBricks', position: 2, color: 'orange' },
+        { id: '4c77b16b-bb72-47eb-a292-fbc6f03f2647', value: EnquirySourceDetail.WEBSITE, label: 'Website', position: 3, color: 'purple' },
+        { id: '04713191-906e-41d6-a696-ede7cb043a97', value: EnquirySourceDetail.MYGATE, label: 'MyGate', position: 4, color: 'yellow' },
+      ],
+      name: 'sourceDetail',
+    },
+    {
+      universalIdentifier: ENQUIRY_STATUS_DETAIL_FIELD,
+      type: FieldType.SELECT,
+      label: 'Status Detail',
+      description: 'Detailed status',
+      icon: 'IconStatusChange',
+      options: [
+        { id: '9b3e688c-ff5e-416b-98a1-a68f437f3b33', value: EnquiryStatusDetail.CONTACTED, label: 'Contacted', position: 0, color: 'blue' },
+        { id: 'b14c57f3-c26f-4220-bf1f-532d888760ed', value: EnquiryStatusDetail.RNR, label: 'RnR', position: 1, color: 'gray' },
+        { id: '168ca74e-f95f-4aba-9750-1d4bffd79702', value: EnquiryStatusDetail.NEW_LEAD, label: 'New Lead', position: 2, color: 'green' },
+        { id: '8a97f6a1-4d81-4c18-8ef3-500e5fcf0548', value: EnquiryStatusDetail.MORE_OPTIONS_REQUESTED, label: 'More Options Requested', position: 3, color: 'orange' },
+        { id: 'db7ebd7b-c3c8-49dd-8f94-cb143f17eec0', value: EnquiryStatusDetail.DROPPED, label: 'Dropped', position: 4, color: 'red' },
+      ],
+      name: 'statusDetail',
     },
   ],
 });

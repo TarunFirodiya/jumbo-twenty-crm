@@ -19,6 +19,13 @@ export const BUILDING_JUMBO_PRICE_ESTIMATE_FIELD = '5289b51f-b45f-457f-a536-8332
 export const BUILDING_UNDER_CONSTRUCTION_FIELD = '4687f6b2-4e99-47b2-bd2d-95f18420bde8';
 export const BUILDING_MODEL_FLAT_AVAILABLE_FIELD = 'd6a7e511-60cb-45df-97bc-f7bd35b59e1f';
 export const BUILDING_GOOGLE_RATING_FIELD = '66495b63-1234-402d-ae51-cf18940e6173';
+export const BUILDING_TOWERS_LIST_FIELD = '211fb50b-b2b8-47aa-8bf2-0b105c89d233';
+export const BUILDING_BUILDER_NAME_FIELD = 'a7cf552e-fb29-401d-87d2-ff093a094ef2';
+export const BUILDING_BUILDER_LEGAL_NAME_FIELD = '22053131-6741-4ee9-91e8-6b3929c41114';
+export const BUILDING_BUILDER_OPERATIONAL_SINCE_FIELD = '06479414-6b0b-4f70-a67a-d99ce5ec5e48';
+export const BUILDING_BUILDER_CATEGORY_FIELD = 'f3f53ca5-ba46-4125-a384-ccae03627607';
+export const BUILDING_PROJECT_ID_FIELD = 'c52b3cee-ffee-448f-a459-22533a924ace';
+export const BUILDING_PROJECT_ACRES_FIELD = 'abf5f27c-2812-4c41-8769-2bbfca9ed6e6';
 
 enum WaterSource {
   BOREWELL = 'BOREWELL',
@@ -193,6 +200,68 @@ export default defineObject({
       description: 'Google review rating (1-5)',
       icon: 'IconStar',
       name: 'googleRating',
+    },
+    {
+      universalIdentifier: BUILDING_TOWERS_LIST_FIELD,
+      type: FieldType.TEXT,
+      label: 'Towers List',
+      description: 'Comma-separated tower names in this project',
+      icon: 'IconBuilding',
+      name: 'towersList',
+    },
+    {
+      universalIdentifier: BUILDING_BUILDER_NAME_FIELD,
+      type: FieldType.TEXT,
+      label: 'Builder Name',
+      description: 'Builder company name',
+      icon: 'IconBuildingSkyscraper',
+      name: 'builderName',
+    },
+    {
+      universalIdentifier: BUILDING_BUILDER_LEGAL_NAME_FIELD,
+      type: FieldType.TEXT,
+      label: 'Builder Legal Name',
+      description: 'Registered legal name of builder',
+      icon: 'IconFileCertificate',
+      name: 'builderLegalName',
+    },
+    {
+      universalIdentifier: BUILDING_BUILDER_OPERATIONAL_SINCE_FIELD,
+      type: FieldType.DATE,
+      label: 'Builder Operational Since',
+      description: 'When builder started operations',
+      icon: 'IconCalendar',
+      name: 'builderOperationalSince',
+    },
+    {
+      universalIdentifier: BUILDING_BUILDER_CATEGORY_FIELD,
+      type: FieldType.SELECT,
+      label: 'Builder Category',
+      description: 'Builder tier classification',
+      icon: 'IconChartBar',
+      options: [
+        { id: 'af16bdfd-330e-4236-9220-a69ecd0ae939', value: 'MARQUEE', label: 'Marquee', position: 0, color: 'purple' },
+        { id: '0aadef59-8942-4c4c-84f3-24965fb3edf5', value: 'HEAD', label: 'Head', position: 1, color: 'blue' },
+        { id: '01f0df45-a45b-4bb8-b0b4-fb897c117658', value: 'TORSO', label: 'Torso', position: 2, color: 'green' },
+        { id: 'da57d165-8ba8-4cea-a4f5-5145078b7612', value: 'TAIL', label: 'Tail', position: 3, color: 'orange' },
+      ],
+      name: 'builderCategory',
+    },
+    {
+      universalIdentifier: BUILDING_PROJECT_ID_FIELD,
+      type: FieldType.TEXT,
+      label: 'Project ID',
+      description: 'External project reference ID',
+      icon: 'IconHash',
+      name: 'projectId',
+    },
+    {
+      universalIdentifier: BUILDING_PROJECT_ACRES_FIELD,
+      type: FieldType.NUMBER,
+      label: 'Project Acres',
+      description: 'Total project land area in acres',
+      icon: 'IconRuler',
+      name: 'projectAcres',
     },
   ],
 });
