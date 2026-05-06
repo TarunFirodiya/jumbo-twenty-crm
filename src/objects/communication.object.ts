@@ -19,6 +19,9 @@ export const COMM_DIRECTION_FIELD = '3261b8e5-43bd-4005-b429-103e94047694';
 export const COMM_DURATION_FIELD = '952490c0-d89c-43a1-a065-e82affedc067';
 export const COMM_TIMESTAMP_FIELD = 'a033607f-f89e-47ee-b2d0-2f1f4cee28e0';
 export const COMM_SUMMARY_FIELD = '01f2e52f-19cf-46fa-9734-471249755d56';
+export const COMM_RAW_MESSAGE_FIELD = 'db20385d-13f9-4b62-b9f6-bb155f0c09da';
+export const COMM_MESSAGE_ID_FIELD = '90f23036-2b28-4fe8-8bcc-7b9b168d1add';
+export const COMM_DELIVERY_STATUS_FIELD = 'd03bb3c2-695d-434f-85d1-d712dd7500ac';
 
 export default defineObject({
   universalIdentifier: COMMUNICATION_UNIVERSAL_IDENTIFIER,
@@ -77,6 +80,35 @@ export default defineObject({
       description: 'Brief summary of the communication',
       icon: 'IconMessage',
       name: 'summary',
+    },
+    {
+      universalIdentifier: COMM_RAW_MESSAGE_FIELD,
+      type: FieldType.TEXT,
+      label: 'Raw Message',
+      description: 'Full message content from WhatsApp or other channels',
+      icon: 'IconMessageDots',
+      name: 'rawMessage',
+    },
+    {
+      universalIdentifier: COMM_MESSAGE_ID_FIELD,
+      type: FieldType.TEXT,
+      label: 'Message ID',
+      description: 'External message ID for delivery tracking',
+      icon: 'IconHash',
+      name: 'messageId',
+    },
+    {
+      universalIdentifier: COMM_DELIVERY_STATUS_FIELD,
+      type: FieldType.SELECT,
+      label: 'Delivery Status',
+      icon: 'IconCheck',
+      options: [
+        { id: '83f86589-efa3-4076-aaf8-b4397e4ba9ba', value: 'SENT', label: 'Sent', position: 0, color: 'blue' },
+        { id: 'f88037d1-162a-4e32-9f7b-57da2c6ff894', value: 'DELIVERED', label: 'Delivered', position: 1, color: 'green' },
+        { id: '2d261896-efc6-4365-a863-f0de6c376f91', value: 'READ', label: 'Read', position: 2, color: 'yellow' },
+        { id: 'a351badd-e6e1-481c-8ee9-ca942c1eb5d3', value: 'FAILED', label: 'Failed', position: 3, color: 'red' },
+      ],
+      name: 'deliveryStatus',
     },
   ],
 });
