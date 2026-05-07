@@ -54,7 +54,6 @@ export const CATALOGUE_COMPASS_PHOTO_FIELD = 'e76d79e9-c8c9-4a9f-b843-c6ce93e186
 export const CATALOGUE_WIFI_SPEED_FIELD = 'aea2d6ef-1748-4e87-bf21-69d630b65ae9';
 export const CATALOGUE_LUX_METER_FIELD = '8fb9c91d-4087-47f0-b58c-f37034b22785';
 export const CATALOGUE_SCORE_FIELD = '0c8d8bf3-2a58-469d-a45a-9f0abaab20c4';
-export const CATALOGUE_NOTES_FIELD = '0c2766c4-f1d5-44ec-8f89-f21b219976fe';
 
 enum DoorFacing {
   EAST = 'EAST',
@@ -673,13 +672,6 @@ export default defineObject({
         { id: '3b4cc9ca-d435-4af4-9a48-42d12a053928', value: CatalogueScore.C, label: 'C', position: 3, color: 'orange' },
       ],
       name: 'catalogueScore',
-    },
-    {
-      universalIdentifier: CATALOGUE_NOTES_FIELD,
-      type: FieldType.RICH_TEXT,
-      label: 'Notes',
-      icon: 'IconNotes',
-      name: 'notes',
     },
   ],
 });

@@ -16,10 +16,9 @@ export const BUILDING_WATER_SOURCE_FIELD = 'c3fc123e-834a-4941-96a0-fb0f2b897b9a
 export const BUILDING_KHATA_FIELD = '46352521-9da3-4a78-92c5-99a795e12b3a';
 export const BUILDING_RERA_NUMBER_FIELD = 'af207887-af0e-479b-a5b7-f9efd39fcbe3';
 export const BUILDING_JUMBO_PRICE_ESTIMATE_FIELD = '5289b51f-b45f-457f-a536-833271c9c617';
-export const BUILDING_UNDER_CONSTRUCTION_FIELD = '4687f6b2-4e99-47b2-bd2d-95f18420bde8';
+export const BUILDING_UNDER_CONSTRUCTION_FIELD = '4cbe1523-94eb-48f4-8f95-8199bbbf4ff5';
 export const BUILDING_MODEL_FLAT_AVAILABLE_FIELD = 'd6a7e511-60cb-45df-97bc-f7bd35b59e1f';
 export const BUILDING_GOOGLE_RATING_FIELD = '66495b63-1234-402d-ae51-cf18940e6173';
-export const BUILDING_TOWERS_LIST_FIELD = '211fb50b-b2b8-47aa-8bf2-0b105c89d233';
 export const BUILDING_BUILDER_NAME_FIELD = 'a7cf552e-fb29-401d-87d2-ff093a094ef2';
 export const BUILDING_BUILDER_LEGAL_NAME_FIELD = '22053131-6741-4ee9-91e8-6b3929c41114';
 export const BUILDING_BUILDER_OPERATIONAL_SINCE_FIELD = '06479414-6b0b-4f70-a67a-d99ce5ec5e48';
@@ -27,6 +26,10 @@ export const BUILDING_BUILDER_CATEGORY_FIELD = 'f3f53ca5-ba46-4125-a384-ccae0362
 export const BUILDING_PROJECT_ID_FIELD = 'c52b3cee-ffee-448f-a459-22533a924ace';
 export const BUILDING_PROJECT_ACRES_FIELD = 'abf5f27c-2812-4c41-8769-2bbfca9ed6e6';
 
+enum UnderConstructionStatus {
+  UNDERCONSTRUCTION = 'UNDERCONSTRUCTION',
+  READY_TO_MOVE = 'READY_TO_MOVE',
+}
 enum WaterSource {
   BOREWELL = 'BOREWELL',
   CORPORATION = 'CORPORATION',
@@ -179,11 +182,15 @@ export default defineObject({
     },
     {
       universalIdentifier: BUILDING_UNDER_CONSTRUCTION_FIELD,
-      type: FieldType.BOOLEAN,
+      type: FieldType.SELECT,
       label: 'Under Construction',
       description: 'Is the building still under construction',
       icon: 'IconHammer',
       name: 'underConstruction',
+      options: [
+        { id: 'fd50b082-7602-4553-8167-014830f517c2', value: UnderConstructionStatus.UNDERCONSTRUCTION, label: 'Underconstruction', position: 0, color: 'green' },
+        { id: 'ce764cca-936b-4128-84ad-e19586413306', value: UnderConstructionStatus.READY_TO_MOVE, label: 'Ready-to-move', position: 1, color: 'orange' },
+      ],
     },
     {
       universalIdentifier: BUILDING_MODEL_FLAT_AVAILABLE_FIELD,
@@ -200,14 +207,6 @@ export default defineObject({
       description: 'Google review rating (1-5)',
       icon: 'IconStar',
       name: 'googleRating',
-    },
-    {
-      universalIdentifier: BUILDING_TOWERS_LIST_FIELD,
-      type: FieldType.TEXT,
-      label: 'Towers List',
-      description: 'Comma-separated tower names in this project',
-      icon: 'IconBuilding',
-      name: 'towersList',
     },
     {
       universalIdentifier: BUILDING_BUILDER_NAME_FIELD,

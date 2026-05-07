@@ -16,14 +16,6 @@ enum PropertyType {
   COMMERCIAL = 'COMMERCIAL',
 }
 
-enum HomeView {
-  POOL = 'POOL',
-  GARDEN = 'GARDEN',
-  ROAD = 'ROAD',
-  CITY = 'CITY',
-  PARK = 'PARK',
-  LAKE = 'LAKE',
-}
 
 enum Facing {
   NORTH = 'NORTH',
@@ -111,21 +103,16 @@ export const PROPERTY_UNIVERSAL_IDENTIFIER = '32e135d0-16b0-4c08-a90f-d4505931ba
 
 // Existing field IDs
 export const NAME_FIELD_UNIVERSAL_IDENTIFIER = '1ea8237c-d043-4305-a788-ccac4bddd29a';
-export const ADDRESS_FIELD_UNIVERSAL_IDENTIFIER = '5d2643e9-ae70-48f4-afe7-b44f741ad44a';
-export const PRICE_FIELD_UNIVERSAL_IDENTIFIER = 'd314dd63-0354-4fef-9ce4-afb58e9b93e6';
 export const BEDROOMS_FIELD_UNIVERSAL_IDENTIFIER = '17b4e5dd-6ab4-48c4-beb1-7694c6d7e57f';
 export const BATHROOMS_FIELD_UNIVERSAL_IDENTIFIER = '26896f45-660d-464e-9378-312639ff4d53';
 export const SQFT_FIELD_UNIVERSAL_IDENTIFIER = 'ab92e8a5-ae85-40a7-a982-565d41d50d36';
 export const STATUS_FIELD_UNIVERSAL_IDENTIFIER = '79b21e74-9893-4211-a933-c4bff831a03d';
 export const TYPE_FIELD_UNIVERSAL_IDENTIFIER = '62dd2bc0-f87a-499f-a2ab-735e7b53c562';
-export const AMENITIES_FIELD_UNIVERSAL_IDENTIFIER = '5cdc44ba-9574-4f38-8cc4-f6c1f805fafb';
 export const ZONE_FIELD_UNIVERSAL_IDENTIFIER = 'b9746f33-ad4f-44c5-99dc-008ef261d91e';
 export const FILES_FIELD_UNIVERSAL_IDENTIFIER = '29d9b019-ac02-45bd-a242-81c5bb459c23';
 
 // New field IDs
 export const JUMBO_ID_FIELD = '03d065e1-2305-49d7-9e83-84f1a3aa6515';
-export const TOWER_FIELD = '2f3aa740-be27-4acd-ba59-f69a06c0563c';
-export const VIEW_FIELD = '278a250e-fb0c-4b86-a878-ff027e1096e5';
 export const MSP_FIELD = '53d6aa40-4d13-4374-b1f8-8f7c02b3ac1b';
 export const MAINTENANCE_FIELD = '188013eb-82b9-4d0c-bd7e-f99e2b48df70';
 export const CARPET_AREA_FIELD = 'b5230be9-208b-41a1-bdfa-9bb7bea1da85';
@@ -143,16 +130,11 @@ export const BALCONY_FIELD = '8151972e-671a-4bfd-bf7d-5ed8446bb816';
 export const KEYS_WITH_FIELD = 'faf7caa8-90bb-40c0-8791-afa177a9fe8e';
 export const INVENTORY_TYPE_FIELD = 'be2301b6-bb87-4d6c-bfc3-62f7595a49a9';
 export const JUMBO_URL_FIELD = 'ce158b82-f0b9-4955-bb4f-a66729b419c6';
-export const HOUSING_URL_FIELD = '5f64c3ff-2378-460a-92b9-6ff4e81e3c93';
-export const NINETYNINE_ACRES_URL_FIELD = 'e4ffe10e-0982-4904-bf3a-40934bcf8f43';
-export const HOUSING_ID_FIELD = '1f849bc6-6e5d-4821-abe8-53b1f8f091bd';
-export const NINETYNINE_ACRES_ID_FIELD = '6a972c94-893e-47d8-9ce9-ba5016299a29';
 export const GTM_READY_FIELD = '31dc3f0d-7753-4f88-95e2-6454c7d661eb';
 export const WEBSITE_LIVE_DATE_FIELD = 'e27738ae-9839-47c6-b13c-82d6a80e5aa6';
-export const HID_FIELD = '81136f11-45f0-4990-b380-e426cb6b8582';
-export const LISTING_SLUG_FIELD = '757aff7a-a971-43fb-9a9c-cc58ee456a7c';
 export const PROPERTY_ON_HOLD_FIELD = 'eef6156c-5a87-4118-98e5-e3a416e0926d';
 export const LISTING_TYPE_FIELD = '8e430749-85d3-4e90-a306-78acb8acba90';
+export const VISIT_SLOTS_FIELD = '00a2854b-0647-4d63-be23-dfeb119a3459';
 export const PROPERTY_FLAT_NUMBER_FIELD = '70a9d0c7-8230-4571-9fa4-b5878a60272f';
 export const PROPERTY_BALCONY_VIEW_1_FIELD = '2ec079e9-9ba8-4fbb-8110-02b1e46f903a';
 export const PROPERTY_BALCONY_VIEW_2_FIELD = '0a8f73b9-86a7-4ca5-a120-5e71a5fc6d10';
@@ -189,22 +171,6 @@ export default defineObject({
       description: 'Display name for the property',
       icon: 'IconHome',
       name: 'name',
-    },
-    {
-      universalIdentifier: ADDRESS_FIELD_UNIVERSAL_IDENTIFIER,
-      type: FieldType.ADDRESS,
-      label: 'Address',
-      description: 'Full property address',
-      icon: 'IconMapPin',
-      name: 'propertyAddress',
-    },
-    {
-      universalIdentifier: PRICE_FIELD_UNIVERSAL_IDENTIFIER,
-      type: FieldType.CURRENCY,
-      label: 'Price',
-      description: 'Listing price in INR',
-      icon: 'IconCurrencyRupee',
-      name: 'price',
     },
     {
       universalIdentifier: BEDROOMS_FIELD_UNIVERSAL_IDENTIFIER,
@@ -261,20 +227,6 @@ export default defineObject({
       name: 'propertyType',
     },
     {
-      universalIdentifier: AMENITIES_FIELD_UNIVERSAL_IDENTIFIER,
-      type: FieldType.MULTI_SELECT,
-      label: 'Amenities',
-      icon: 'IconPool',
-      options: [
-        { id: 'c6062770-2504-412a-8b90-8f9ae3bc47d0', value: 'POOL', label: 'Swimming Pool', position: 0, color: 'blue' },
-        { id: '03d3eee3-a9b7-432d-a561-4f493e75d60f', value: 'GYM', label: 'Gym', position: 1, color: 'green' },
-        { id: '8f9c345f-b551-499c-9940-08f0eceda468', value: 'PARKING', label: 'Parking', position: 2, color: 'orange' },
-        { id: '8a1384f1-ace0-4bd3-8e8d-2d714f228ef1', value: 'SECURITY', label: '24/7 Security', position: 3, color: 'red' },
-        { id: '863d1859-e4fa-4ca6-be2f-9a3cf02dbd5c', value: 'ELEVATOR', label: 'Elevator', position: 4, color: 'gray' },
-      ],
-      name: 'amenities',
-    },
-    {
       universalIdentifier: FILES_FIELD_UNIVERSAL_IDENTIFIER,
       type: FieldType.FILES,
       label: 'Photos & Documents',
@@ -308,30 +260,6 @@ export default defineObject({
       description: 'Auto-generated Jumbo reference ID',
       icon: 'IconHash',
       name: 'jumboId',
-    },
-    {
-      universalIdentifier: TOWER_FIELD,
-      type: FieldType.TEXT,
-      label: 'Tower',
-      description: 'Tower or wing name within the building',
-      icon: 'IconBuilding',
-      name: 'tower',
-    },
-    {
-      universalIdentifier: VIEW_FIELD,
-      type: FieldType.SELECT,
-      label: 'View',
-      description: 'Primary view from the property',
-      icon: 'IconEye',
-      options: [
-        { id: 'a1b2c3d4-e5f6-7890-abcd-ef1234567891', value: HomeView.POOL, label: 'Pool View', position: 0, color: 'blue' },
-        { id: 'a1b2c3d4-e5f6-7890-abcd-ef1234567892', value: HomeView.GARDEN, label: 'Garden View', position: 1, color: 'green' },
-        { id: 'a1b2c3d4-e5f6-7890-abcd-ef1234567893', value: HomeView.ROAD, label: 'Road View', position: 2, color: 'orange' },
-        { id: 'a1b2c3d4-e5f6-7890-abcd-ef1234567894', value: HomeView.CITY, label: 'City View', position: 3, color: 'purple' },
-        { id: 'a1b2c3d4-e5f6-7890-abcd-ef1234567895', value: HomeView.PARK, label: 'Park View', position: 4, color: 'yellow' },
-        { id: 'a1b2c3d4-e5f6-7890-abcd-ef1234567896', value: HomeView.LAKE, label: 'Lake View', position: 5, color: 'gray' },
-      ],
-      name: 'homeView',
     },
     {
       universalIdentifier: MSP_FIELD,
@@ -533,44 +461,20 @@ export default defineObject({
       name: 'listingType',
     },
     {
+      universalIdentifier: VISIT_SLOTS_FIELD,
+      type: FieldType.RAW_JSON,
+      label: 'Visit Slots',
+      description: 'Available visit slots for this property (JSON format)',
+      icon: 'IconCalendar',
+      name: 'visitSlots',
+    },
+    {
       universalIdentifier: JUMBO_URL_FIELD,
       type: FieldType.TEXT,
       label: 'Jumbo Listing URL',
       description: 'Website listing link',
       icon: 'IconLink',
       name: 'jumboUrl',
-    },
-    {
-      universalIdentifier: HOUSING_URL_FIELD,
-      type: FieldType.TEXT,
-      label: 'Housing.com URL',
-      description: 'Housing.com listing URL',
-      icon: 'IconLink',
-      name: 'housingUrl',
-    },
-    {
-      universalIdentifier: NINETYNINE_ACRES_URL_FIELD,
-      type: FieldType.TEXT,
-      label: '99Acres URL',
-      description: '99Acres listing URL',
-      icon: 'IconLink',
-      name: 'ninetyNineAcresUrl',
-    },
-    {
-      universalIdentifier: HOUSING_ID_FIELD,
-      type: FieldType.TEXT,
-      label: 'Housing ID',
-      description: 'External Housing.com platform ID',
-      icon: 'IconHash',
-      name: 'housingId',
-    },
-    {
-      universalIdentifier: NINETYNINE_ACRES_ID_FIELD,
-      type: FieldType.TEXT,
-      label: '99Acres ID',
-      description: 'External 99Acres platform ID',
-      icon: 'IconHash',
-      name: 'ninetyNineAcresId',
     },
     {
       universalIdentifier: GTM_READY_FIELD,
@@ -587,22 +491,6 @@ export default defineObject({
       description: 'When published on website',
       icon: 'IconCalendar',
       name: 'websiteLiveDate',
-    },
-    {
-      universalIdentifier: HID_FIELD,
-      type: FieldType.TEXT,
-      label: 'HID',
-      description: 'Internal housing ID',
-      icon: 'IconHash',
-      name: 'hid',
-    },
-    {
-      universalIdentifier: LISTING_SLUG_FIELD,
-      type: FieldType.TEXT,
-      label: 'Listing Slug',
-      description: 'SEO-friendly URL slug',
-      icon: 'IconLink',
-      name: 'listingSlug',
     },
     {
       universalIdentifier: PROPERTY_ON_HOLD_FIELD,

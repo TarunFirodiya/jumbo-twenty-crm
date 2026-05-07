@@ -55,7 +55,6 @@ export const INSPECTION_FLOOR_PLAN_FIELD = '9ce58085-2f28-42d7-8f3b-dbd61e72e651
 export const INSPECTION_COMPASS_PHOTO_FIELD = '8a4d7c3e-b12f-4a8e-9c5d-7e3f9a1b2c4d';
 export const INSPECTION_WIFI_SPEED_FIELD = '9b5e8d4f-c23e-4b9f-ad6e-8f4e0b2c3d5e';
 export const INSPECTION_LUX_METER_FIELD = 'ac6f9e50-d34f-4c0f-be7f-9a5f1c3d4e6f';
-export const INSPECTION_NOTES_FIELD = 'aa77fd3a-e9e5-40cb-ae8e-aaef139f2625';
 
 enum DoorFacing {
   EAST = 'EAST',
@@ -655,13 +654,6 @@ export default defineObject({
       universalSettings: {
         maxNumberOfValues: 5,
       },
-    },
-    {
-      universalIdentifier: INSPECTION_NOTES_FIELD,
-      type: FieldType.RICH_TEXT,
-      label: 'Notes',
-      icon: 'IconNotes',
-      name: 'notes',
     },
   ],
 });

@@ -1,6 +1,6 @@
 {
   "name": "jumbo-realestate",
-  "version": "0.4.9",
+  "version": "0.5.0",
   "license": "MIT",
   "engines": {
     "node": "^24.5.0",

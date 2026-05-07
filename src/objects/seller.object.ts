@@ -20,13 +20,6 @@ enum SellerDropReason {
   PAPERWORK_ISSUE = 'PAPERWORK_ISSUE',
 }
 
-enum SellerTimeline {
-  IMMEDIATE = 'IMMEDIATE',
-  ONE_MONTH = 'ONE_MONTH',
-  THREE_MONTHS = 'THREE_MONTHS',
-  SIX_MONTHS = 'SIX_MONTHS',
-  FLEXIBLE = 'FLEXIBLE',
-}
 
 enum OnboardingStatus {
   IDENTIFIED = 'IDENTIFIED',
@@ -66,19 +59,11 @@ export const SELLER_NAME_FIELD = 'b17fb3d7-b544-49ca-8a1e-1df01721cee0';
 export const SELLER_STAGE_FIELD = '4b596601-61ea-4119-8175-d6bb73310d3e';
 export const SELLER_DROP_REASON_FIELD = '601e02de-9ee6-4328-89b6-3464577833ba';
 export const SELLER_EXPECTED_PRICE_FIELD = '5a93ecd2-f26e-48a0-9578-fe6b307f1a72';
-export const SELLER_TIMELINE_FIELD = '706cfa49-503a-468f-a2fa-c5c2b79db8fd';
-export const SELLER_PROPERTY_ADDRESS_FIELD = '6bdf8162-1d95-4995-9619-a94feb638eb4';
 export const SELLER_PROPERTY_FIELD = '1b54e5ce-be1c-4616-8cb5-5a3ce311ebf6';
 export const SELLER_MOTIVATION_FIELD = '357f3bb8-f18b-416c-891d-59e609838e8c';
 export const SELLER_HOW_HEARD_FIELD = '370f96e3-cc5d-4a8a-bf94-4fe247ee444c';
-export const SELLER_IS_OWNER_FIELD = '4e83b3a3-8694-44f5-a12e-761264afb698';
-export const SELLER_NOTES_FIELD = '1f784d96-986c-486e-83bf-7ce62d6c3abc';
-export const SELLER_PHONE_FIELD = 'fb05cf64-c06b-4eda-9a02-79382d9a36c4';
-export const SELLER_EMAIL_FIELD = '1552ac2c-6808-403d-b3db-629d684797c6';
 export const SELLER_ONBOARDING_STATUS_FIELD = '881d3524-2ea2-4740-80f7-f23775e1562e';
-export const SELLER_ONBOARDING_DATE_FIELD = 'f4d9c312-9d63-4c52-b538-3f7e158387cc';
 export const SELLER_SOURCE_FIELD = '8fdc1eaf-02af-4cf3-b1bd-31afb7c3334f';
-export const SELLER_FOLLOW_UP_DATE_FIELD = '1e2cf7b5-9dd2-4b82-876c-d3357368a054';
 export const SELLER_SELLER_URGENCY_FIELD = 'd24c3a57-fd10-42ac-a894-3ccb6e83ade0';
 export const SELLER_RELATIONSHIP_MANAGER_FIELD = '57cb224c-cf0d-4d93-ad04-2f9845a01aa6';
 export const SELLER_REFERRAL_SOURCE_FIELD = '73396508-4246-408b-95df-644e031ccc50';
@@ -145,28 +130,6 @@ export default defineObject({
       name: 'expectedPrice',
     },
     {
-      universalIdentifier: SELLER_TIMELINE_FIELD,
-      type: FieldType.SELECT,
-      label: 'Timeline',
-      icon: 'IconCalendar',
-      options: [
-        { id: '811c0a01-dc03-487a-9d5a-21aca5d73842', value: SellerTimeline.IMMEDIATE, label: 'Immediate', position: 0, color: 'red' },
-        { id: '890b8127-28b6-4b32-978b-4852dd3dd8c4', value: SellerTimeline.ONE_MONTH, label: '1 Month', position: 1, color: 'orange' },
-        { id: 'e5e33ffa-69f4-43d8-995a-bb474eb4c3c5', value: SellerTimeline.THREE_MONTHS, label: '3 Months', position: 2, color: 'yellow' },
-        { id: 'ef735c82-4d84-490b-9e2d-3d62c5713ee6', value: SellerTimeline.SIX_MONTHS, label: '6 Months', position: 3, color: 'blue' },
-        { id: 'a7908c8d-b141-4ff0-b7fa-9e89fdd4f0b1', value: SellerTimeline.FLEXIBLE, label: 'Flexible', position: 4, color: 'green' },
-      ],
-      name: 'timeline',
-    },
-    {
-      universalIdentifier: SELLER_PROPERTY_ADDRESS_FIELD,
-      type: FieldType.ADDRESS,
-      label: 'Property Address',
-      description: 'Address of the property being sold (free text for initial capture)',
-      icon: 'IconMapPin',
-      name: 'propertyAddress',
-    },
-    {
       universalIdentifier: SELLER_MOTIVATION_FIELD,
       type: FieldType.SELECT,
       label: 'Motivation',
@@ -200,38 +163,6 @@ export default defineObject({
       name: 'howHeard',
     },
     {
-      universalIdentifier: SELLER_IS_OWNER_FIELD,
-      type: FieldType.BOOLEAN,
-      label: 'Is Owner',
-      description: 'Is this person the legal owner of the property?',
-      icon: 'IconUserCheck',
-      name: 'isOwner',
-    },
-    {
-      universalIdentifier: SELLER_NOTES_FIELD,
-      type: FieldType.RICH_TEXT,
-      label: 'Notes',
-      description: 'Seller notes and context',
-      icon: 'IconNotes',
-      name: 'notes',
-    },
-    {
-      universalIdentifier: SELLER_PHONE_FIELD,
-      type: FieldType.TEXT,
-      label: 'Phone',
-      description: 'Seller phone number',
-      icon: 'IconPhone',
-      name: 'phone',
-    },
-    {
-      universalIdentifier: SELLER_EMAIL_FIELD,
-      type: FieldType.TEXT,
-      label: 'Email',
-      description: 'Seller email address',
-      icon: 'IconMail',
-      name: 'email',
-    },
-    {
       universalIdentifier: SELLER_ONBOARDING_STATUS_FIELD,
       type: FieldType.SELECT,
       label: 'Onboarding Status',
@@ -246,14 +177,6 @@ export default defineObject({
         { id: '64e08188-95e2-4af3-8eda-48107bd42acb', value: OnboardingStatus.RNR, label: 'RnR', position: 4, color: 'gray' },
       ],
       name: 'onboardingStatus',
-    },
-    {
-      universalIdentifier: SELLER_ONBOARDING_DATE_FIELD,
-      type: FieldType.DATE,
-      label: 'Onboarding Date',
-      description: 'When seller was onboarded',
-      icon: 'IconCalendar',
-      name: 'onboardingDate',
     },
     {
       universalIdentifier: SELLER_SOURCE_FIELD,
@@ -278,14 +201,6 @@ export default defineObject({
         { id: '9ce076f6-a5b4-45e3-bdcd-4aacc751e4e0', value: SellerSource.FRIEND_RELATIVE, label: 'Friend/Relative', position: 13, color: 'purple' },
       ],
       name: 'source',
-    },
-    {
-      universalIdentifier: SELLER_FOLLOW_UP_DATE_FIELD,
-      type: FieldType.DATE_TIME,
-      label: 'Follow Up Date',
-      description: 'Next follow up scheduled',
-      icon: 'IconCalendar',
-      name: 'followUpDate',
     },
     {
       universalIdentifier: SELLER_SELLER_URGENCY_FIELD,

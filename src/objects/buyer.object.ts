@@ -1,17 +1,5 @@
 import { defineObject, FieldType } from 'twenty-sdk/define';
 
-enum BuyerStage {
-  NEW_ENQUIRY = 'NEW_ENQUIRY',
-  QUALIFIED = 'QUALIFIED',
-  REQUIREMENTS_CAPTURED = 'REQUIREMENTS_CAPTURED',
-  PROPERTY_SHORTLISTED = 'PROPERTY_SHORTLISTED',
-  VISITS_SCHEDULED = 'VISITS_SCHEDULED',
-  NEGOTIATING = 'NEGOTIATING',
-  CLOSED_WON = 'CLOSED_WON',
-  ON_HOLD = 'ON_HOLD',
-  DROPPED = 'DROPPED',
-}
-
 enum BuyerDropReason {
   BUDGET_MISMATCH = 'BUDGET_MISMATCH',
   LOCATION_MISMATCH = 'LOCATION_MISMATCH',
@@ -32,7 +20,6 @@ enum LeadStage {
 
 export const BUYER_UNIVERSAL_IDENTIFIER = 'c85672f9-31e2-4f14-a241-e5cc1b4d6289';
 export const BUYER_NAME_FIELD = '70a817ae-74b2-433c-85e3-06c930b7bf23';
-export const BUYER_STAGE_FIELD = '65a6f278-f8b0-47f0-b88d-282b98407b0d';
 export const BUYER_DROP_REASON_FIELD = '7279de78-2126-4f59-9336-623a118c0809';
 export const BUYER_BUDGET_MIN_FIELD = 'f1a65305-da5d-43e3-ae05-16517cad582b';
 export const BUYER_BUDGET_MAX_FIELD = '89a78544-404a-414e-88a2-5d6a39397c59';
@@ -50,11 +37,7 @@ export const BUYER_TIMELINE_FIELD = '1f1f94a6-b100-4073-b05a-fd1b02beb4b0';
 export const BUYER_LOAN_REQUIRED_FIELD = '1abd3561-8d5d-4da8-8f38-6d6eb764dc44';
 export const BUYER_MOVE_IN_DATE_FIELD = '14f923f5-114e-4fd5-b8f1-d487a73fbf7c';
 export const BUYER_MAX_MAINTENANCE_FIELD = '6949cf14-5481-4276-982b-6b654e0d0cc2';
-export const BUYER_NOTES_FIELD = '37103533-24ed-4fda-977b-94e8dd24d6bf';
-export const BUYER_PHONE_FIELD = '598a9ea5-7330-41d7-a435-4a363732e329';
-export const BUYER_EMAIL_FIELD = 'b48edbf7-3174-4ad0-a670-5e231ed8d89d';
 export const BUYER_LEAD_STAGE_FIELD = '2fc48cea-8251-443a-8c1e-5491f3c510c8';
-export const BUYER_NEXT_FOLLOW_UP_FIELD = '5739d435-9bc5-409a-8ea7-e9b9298d7deb';
 export const BUYER_QUALIFIED_FIELD = '2c09db33-0384-452c-bfa9-24ebf9e49141';
 export const BUYER_LANDMARK_FIELD = 'ad3c5e69-dfd6-4be0-adcf-023c6b5fb4e7';
 export const BUYER_MUST_HAVES_FIELD = '3f7f4009-3cdb-425c-a0df-36ca3c734447';
@@ -80,25 +63,6 @@ export default defineObject({
       description: 'Display name for the buyer',
       icon: 'IconUser',
       name: 'name',
-    },
-    {
-      universalIdentifier: BUYER_STAGE_FIELD,
-      type: FieldType.SELECT,
-      label: 'Stage',
-      icon: 'IconStages',
-      defaultValue: `'${BuyerStage.NEW_ENQUIRY}'`,
-      options: [
-        { id: '02e6155c-dacb-4c13-aa2d-1ef84fb01d71', value: BuyerStage.NEW_ENQUIRY, label: 'New Enquiry', position: 0, color: 'blue' },
-        { id: 'f3f10aa9-5307-4b02-8dd8-de47f690f53f', value: BuyerStage.QUALIFIED, label: 'Qualified', position: 1, color: 'yellow' },
-        { id: '7ed91cd2-2b4c-498f-a756-c8d2e871ad19', value: BuyerStage.REQUIREMENTS_CAPTURED, label: 'Requirements Captured', position: 2, color: 'purple' },
-        { id: '47723065-ad9e-407d-9b46-711a6c8f8ca1', value: BuyerStage.PROPERTY_SHORTLISTED, label: 'Property Shortlisted', position: 3, color: 'blue' },
-        { id: '87c88b0f-d64b-4de2-9659-d89c41421ee3', value: BuyerStage.VISITS_SCHEDULED, label: 'Visits Scheduled', position: 4, color: 'orange' },
-        { id: '925c1a62-b130-4107-8366-e3ba029a0a91', value: BuyerStage.NEGOTIATING, label: 'Negotiating', position: 5, color: 'pink' },
-        { id: '0d60718e-2979-4a8a-9c7e-be7b4415003c', value: BuyerStage.CLOSED_WON, label: 'Closed Won', position: 6, color: 'green' },
-        { id: '8e3a644f-6c4e-4e70-8e4f-ae75eb48b98d', value: BuyerStage.ON_HOLD, label: 'On Hold', position: 7, color: 'gray' },
-        { id: 'c766d03d-e9d8-4ea2-b58b-d3d7a97a9600', value: BuyerStage.DROPPED, label: 'Dropped', position: 8, color: 'red' },
-      ],
-      name: 'stage',
     },
     {
       universalIdentifier: BUYER_DROP_REASON_FIELD,
@@ -286,30 +250,6 @@ export default defineObject({
       name: 'preferredPropertyTypes',
     },
     {
-      universalIdentifier: BUYER_NOTES_FIELD,
-      type: FieldType.RICH_TEXT,
-      label: 'Notes',
-      description: 'Buyer notes and requirements',
-      icon: 'IconNotes',
-      name: 'notes',
-    },
-    {
-      universalIdentifier: BUYER_PHONE_FIELD,
-      type: FieldType.TEXT,
-      label: 'Phone',
-      description: 'Buyer phone number',
-      icon: 'IconPhone',
-      name: 'phone',
-    },
-    {
-      universalIdentifier: BUYER_EMAIL_FIELD,
-      type: FieldType.TEXT,
-      label: 'Email',
-      description: 'Buyer email address',
-      icon: 'IconMail',
-      name: 'email',
-    },
-    {
       universalIdentifier: BUYER_LEAD_STAGE_FIELD,
       type: FieldType.SELECT,
       label: 'Lead Stage',
@@ -323,14 +263,6 @@ export default defineObject({
         { id: '4048629d-0970-43cc-8614-a9e41ac826f0', value: LeadStage.INACTIVE, label: 'Inactive', position: 4, color: 'gray' },
       ],
       name: 'leadStage',
-    },
-    {
-      universalIdentifier: BUYER_NEXT_FOLLOW_UP_FIELD,
-      type: FieldType.DATE_TIME,
-      label: 'Next Follow Up',
-      description: 'When to follow up next',
-      icon: 'IconCalendar',
-      name: 'nextFollowUp',
     },
     {
       universalIdentifier: BUYER_QUALIFIED_FIELD,
