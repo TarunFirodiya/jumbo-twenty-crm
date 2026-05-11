@@ -2,21 +2,21 @@ import { definePageLayout, PageLayoutTabLayoutMode } from 'twenty-sdk/define';
 import { PROPERTY_UNIVERSAL_IDENTIFIER } from '../objects/property.object';
 
 export default definePageLayout({
-  universalIdentifier: 'c3d4e5f6-7a8b-9c0d-1e2f-3a4b5c6d7e8f',
+  universalIdentifier: '5d42b244-b5eb-48ad-a881-f637e56a5de1',
   name: 'Default Property Layout',
   type: 'RECORD_PAGE',
   objectUniversalIdentifier: PROPERTY_UNIVERSAL_IDENTIFIER,
   tabs: [
     {
-      universalIdentifier: 'd4e5f6a7-8b9c-0d1e-2f3a-4b5c6d7e8f9a',
-      pageLayoutUniversalIdentifier: 'c3d4e5f6-7a8b-9c0d-1e2f-3a4b5c6d7e8f',
+      universalIdentifier: '6af18e1a-4c2a-415b-8af5-3291d391e851',
+      pageLayoutUniversalIdentifier: '5d42b244-b5eb-48ad-a881-f637e56a5de1',
       title: 'Home',
       position: 0,
       icon: 'IconHome',
       layoutMode: PageLayoutTabLayoutMode.VERTICAL_LIST,
       widgets: [
         {
-          universalIdentifier: 'e5f6a7b8-9c0d-1e2f-3a4b-5c6d7e8f9a0b',
+          universalIdentifier: '877efc34-afec-4a33-a2dd-8fea4b50c7a3',
           title: 'Fields',
           type: 'FIELDS',
           configuration: {

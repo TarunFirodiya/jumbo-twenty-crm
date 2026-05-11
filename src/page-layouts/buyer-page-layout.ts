@@ -2,21 +2,21 @@ import { definePageLayout, PageLayoutTabLayoutMode } from 'twenty-sdk/define';
 import { BUYER_UNIVERSAL_IDENTIFIER } from '../objects/buyer.object';
 
 export default definePageLayout({
-  universalIdentifier: 'f9a3c2b1-1d4e-5f6a-7b8c-9d0e1f2a3b4c',
+  universalIdentifier: 'a8d8ef96-4d4e-4621-8212-70c41b5f7f16',
   name: 'Default Buyer Layout',
   type: 'RECORD_PAGE',
   objectUniversalIdentifier: BUYER_UNIVERSAL_IDENTIFIER,
   tabs: [
     {
-      universalIdentifier: 'a1b2c3d4-5e6f-7a8b-9c0d-1e2f3a4b5c6d',
-      pageLayoutUniversalIdentifier: 'f9a3c2b1-1d4e-5f6a-7b8c-9d0e1f2a3b4c',
+      universalIdentifier: '503b5334-c559-4d9b-88ce-246873aa7907',
+      pageLayoutUniversalIdentifier: 'a8d8ef96-4d4e-4621-8212-70c41b5f7f16',
       title: 'Home',
       position: 0,
       icon: 'IconHome',
       layoutMode: PageLayoutTabLayoutMode.VERTICAL_LIST,
       widgets: [
         {
-          universalIdentifier: 'b2c3d4e5-6f7a-8b9c-0d1e-2f3a4b5c6d7e',
+          universalIdentifier: 'f642a71c-9ddb-4cfb-bb8e-bb559ca5901a',
           title: 'Fields',
           type: 'FIELDS',
           configuration: {

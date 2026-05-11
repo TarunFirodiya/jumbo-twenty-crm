@@ -2,21 +2,21 @@ import { definePageLayout, PageLayoutTabLayoutMode } from 'twenty-sdk/define';
 import { ENQUIRY_UNIVERSAL_IDENTIFIER } from '../objects/enquiry.object';
 
 export default definePageLayout({
-  universalIdentifier: 'f6a7b8c9-0d1e-2f3a-4b5c-6d7e8f9a0b1c',
+  universalIdentifier: '8c38fc78-b999-463f-9332-80459a41c5a4',
   name: 'Default Enquiry Layout',
   type: 'RECORD_PAGE',
   objectUniversalIdentifier: ENQUIRY_UNIVERSAL_IDENTIFIER,
   tabs: [
     {
-      universalIdentifier: 'a7b8c9d0-1e2f-3a4b-5c6d-7e8f9a0b1c2d',
-      pageLayoutUniversalIdentifier: 'f6a7b8c9-0d1e-2f3a-4b5c-6d7e8f9a0b1c',
+      universalIdentifier: '56420ea6-a6c1-4836-b2a4-8068dbf7a139',
+      pageLayoutUniversalIdentifier: '8c38fc78-b999-463f-9332-80459a41c5a4',
       title: 'Home',
       position: 0,
       icon: 'IconHome',
       layoutMode: PageLayoutTabLayoutMode.VERTICAL_LIST,
       widgets: [
         {
-          universalIdentifier: 'b8c9d0e1-2f3a-4b5c-6d7e-8f9a0b1c2d3e',
+          universalIdentifier: 'fa24269e-ae9f-4373-bc21-d7b5a9da9042',
           title: 'Fields',
           type: 'FIELDS',
           configuration: {

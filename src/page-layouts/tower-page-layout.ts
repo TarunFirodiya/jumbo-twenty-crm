@@ -2,21 +2,21 @@ import { definePageLayout, PageLayoutTabLayoutMode } from 'twenty-sdk/define';
 import { TOWER_UNIVERSAL_IDENTIFIER } from '../objects/tower.object';
 
 export default definePageLayout({
-  universalIdentifier: 'f8a9b0c1-2d3e-4f5a-6b7c-8d9e0f1a2b3c',
+  universalIdentifier: 'b101d8d7-e9f2-4d6b-a725-268778f8fafd',
   name: 'Default Tower Layout',
   type: 'RECORD_PAGE',
   objectUniversalIdentifier: TOWER_UNIVERSAL_IDENTIFIER,
   tabs: [
     {
-      universalIdentifier: 'a9b0c1d2-3e4f-5a6b-7c8d-9e0f1a2b3c4d',
-      pageLayoutUniversalIdentifier: 'f8a9b0c1-2d3e-4f5a-6b7c-8d9e0f1a2b3c',
+      universalIdentifier: 'd0e191de-684b-4491-8fd0-0388a37b8d29',
+      pageLayoutUniversalIdentifier: 'b101d8d7-e9f2-4d6b-a725-268778f8fafd',
       title: 'Home',
       position: 0,
       icon: 'IconHome',
       layoutMode: PageLayoutTabLayoutMode.VERTICAL_LIST,
       widgets: [
         {
-          universalIdentifier: 'b0c1d2e3-4f5a-6b7c-8d9e-0f1a2b3c4d5e',
+          universalIdentifier: '0828ef51-abce-4d2e-823d-997d99abe8b7',
           title: 'Fields',
           type: 'FIELDS',
           configuration: {
