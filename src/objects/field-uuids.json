@@ -1,0 +1,161 @@
+{
+  "building": {
+    "universalIdentifier": "73412f3f-c96a-42c6-ab1c-d66d5c6942c2",
+    "icon": "IconBuildingSkyscraper",
+    "fields": [
+      { "constantName": "BUILDING_NAME_FIELD", "uuid": "eec46cf4-6b68-4f78-a11d-72dbde406405" },
+      { "constantName": "BUILDING_LOCALITY_FIELD", "uuid": "30366be4-4e78-4439-ad1b-91b89432bbbb" },
+      { "constantName": "BUILDING_NEAREST_LANDMARK_FIELD", "uuid": "7296e46d-82c7-4c15-9c56-29514ee88299" },
+      { "constantName": "BUILDING_POSSESSION_DATE_FIELD", "uuid": "8d7f5bb6-f713-40cf-adc1-e1415a212e90" },
+      { "constantName": "BUILDING_TOTAL_FLOORS_FIELD", "uuid": "547b2fa9-a0c0-4734-9bf4-e8c06f871b52" },
+      { "constantName": "BUILDING_TOTAL_UNITS_FIELD", "uuid": "ad90d158-e356-4335-aa51-0dfa4e00101b" },
+      { "constantName": "BUILDING_ACRES_FIELD", "uuid": "e7b3ee04-7574-479f-9ff0-07c2e975c7f0" },
+      { "constantName": "BUILDING_MAP_LINK_FIELD", "uuid": "4a657b0e-61bc-4446-ae6f-34970ed9aa86" },
+      { "constantName": "BUILDING_LATITUDE_FIELD", "uuid": "11455cc3-76e4-4f85-8150-474305890560" },
+      { "constantName": "BUILDING_LONGITUDE_FIELD", "uuid": "71248ce7-8a17-494f-8720-ea4cccbeb13b" },
+      { "constantName": "BUILDING_AMENITIES_FIELD", "uuid": "2cfbeb33-1cf3-4049-aa5d-ca2c9de26f56" },
+      { "constantName": "BUILDING_WATER_SOURCE_FIELD", "uuid": "c3fc123e-834a-4941-96a0-fb0f2b897b9a" },
+      { "constantName": "BUILDING_KHATA_FIELD", "uuid": "46352521-9da3-4a78-92c5-99a795e12b3a" },
+      { "constantName": "BUILDING_RERA_NUMBER_FIELD", "uuid": "af207887-af0e-479b-a5b7-f9efd39fcbe3" },
+      { "constantName": "BUILDING_JUMBO_PRICE_ESTIMATE_FIELD", "uuid": "5289b51f-b45f-457f-a536-833271c9c617" },
+      { "constantName": "BUILDING_UNDER_CONSTRUCTION_FIELD", "uuid": "4cbe1523-94eb-48f4-8f95-8199bbbf4ff5" },
+      { "constantName": "BUILDING_MODEL_FLAT_AVAILABLE_FIELD", "uuid": "d6a7e511-60cb-45df-97bc-f7bd35b59e1f" },
+      { "constantName": "BUILDING_GOOGLE_RATING_FIELD", "uuid": "66495b63-1234-402d-ae51-cf18940e6173" },
+      { "constantName": "BUILDING_BUILDER_NAME_FIELD", "uuid": "a7cf552e-fb29-401d-87d2-ff093a094ef2" },
+      { "constantName": "BUILDING_BUILDER_LEGAL_NAME_FIELD", "uuid": "22053131-6741-4ee9-91e8-6b3929c41114" },
+      { "constantName": "BUILDING_BUILDER_OPERATIONAL_SINCE_FIELD", "uuid": "06479414-6b0b-4f70-a67a-d99ce5ec5e48" },
+      { "constantName": "BUILDING_BUILDER_CATEGORY_FIELD", "uuid": "f3f53ca5-ba46-4125-a384-ccae03627607" },
+      { "constantName": "BUILDING_PROJECT_ID_FIELD", "uuid": "c52b3cee-ffee-448f-a459-22533a924ace" },
+      { "constantName": "BUILDING_PROJECT_ACRES_FIELD", "uuid": "abf5f27c-2812-4c41-8769-2bbfca9ed6e6" }
+    ]
+  },
+  "property": {
+    "universalIdentifier": "32e135d0-16b0-4c08-a90f-d4505931bae0",
+    "icon": "IconHome",
+    "fields": [
+      { "constantName": "NAME_FIELD_UNIVERSAL_IDENTIFIER", "uuid": "1ea8237c-d043-4305-a788-ccac4bddd29a" },
+      { "constantName": "BEDROOMS_FIELD_UNIVERSAL_IDENTIFIER", "uuid": "17b4e5dd-6ab4-48c4-beb1-7694c6d7e57f" },
+      { "constantName": "BATHROOMS_FIELD_UNIVERSAL_IDENTIFIER", "uuid": "26896f45-660d-464e-9378-312639ff4d53" },
+      { "constantName": "SQFT_FIELD_UNIVERSAL_IDENTIFIER", "uuid": "ab92e8a5-ae85-40a7-a982-565d41d50d36" },
+      { "constantName": "STATUS_FIELD_UNIVERSAL_IDENTIFIER", "uuid": "79b21e74-9893-4211-a933-c4bff831a03d" },
+      { "constantName": "TYPE_FIELD_UNIVERSAL_IDENTIFIER", "uuid": "62dd2bc0-f87a-499f-a2ab-735e7b53c562" },
+      { "constantName": "ZONE_FIELD_UNIVERSAL_IDENTIFIER", "uuid": "b9746f33-ad4f-44c5-99dc-008ef261d91e" },
+      { "constantName": "FILES_FIELD_UNIVERSAL_IDENTIFIER", "uuid": "29d9b019-ac02-45bd-a242-81c5bb459c23" },
+      { "constantName": "JUMBO_ID_FIELD", "uuid": "03d065e1-2305-49d7-9e83-84f1a3aa6515" },
+      { "constantName": "MSP_FIELD", "uuid": "53d6aa40-4d13-4374-b1f8-8f7c02b3ac1b" },
+      { "constantName": "MAINTENANCE_FIELD", "uuid": "188013eb-82b9-4d0c-bd7e-f99e2b48df70" },
+      { "constantName": "CARPET_AREA_FIELD", "uuid": "b5230be9-208b-41a1-bdfa-9bb7bea1da85" },
+      { "constantName": "FACING_FIELD", "uuid": "9f36eb2f-9df7-486f-811a-47cc34ce43dd" },
+      { "constantName": "FLOOR_FIELD", "uuid": "651eebfe-8c6d-44bf-bdef-75d07c496316" },
+      { "constantName": "USP1_FIELD", "uuid": "91554497-ec79-47b3-98e3-7ff9213df7d1" },
+      { "constantName": "USP2_FIELD", "uuid": "779b2899-2ba6-4480-8124-3f33f75b3b33" },
+      { "constantName": "USP3_FIELD", "uuid": "1c6278e6-a4d5-4a38-93a1-ce5c945fbfb3" },
+      { "constantName": "HOME_TYPE_FIELD", "uuid": "c80010b4-fd7a-4ad0-b889-a6afcb9901ef" },
+      { "constantName": "OCCUPANCY_FIELD", "uuid": "111fd1b2-3014-4818-b8dc-51ffe4dcac6d" },
+      { "constantName": "FURNISHING_FIELD", "uuid": "ce7c655c-7413-4c91-a465-5da2882278b6" },
+      { "constantName": "SELLER_FEES_FIELD", "uuid": "194d4c5a-4dc3-473a-a357-ce1ba85ac512" },
+      { "constantName": "PARKING_FIELD", "uuid": "2eb0f18d-c0be-4736-9be1-1f649fa7b0bd" },
+      { "constantName": "BALCONY_FIELD", "uuid": "8151972e-671a-4bfd-bf7d-5ed8446bb816" },
+      { "constantName": "KEYS_WITH_FIELD", "uuid": "faf7caa8-90bb-40c0-8791-afa177a9fe8e" },
+      { "constantName": "INVENTORY_TYPE_FIELD", "uuid": "be2301b6-bb87-4d6c-bfc3-62f7595a49a9" },
+      { "constantName": "JUMBO_URL_FIELD", "uuid": "ce158b82-f0b9-4955-bb4f-a66729b419c6" },
+      { "constantName": "GTM_READY_FIELD", "uuid": "31dc3f0d-7753-4f88-95e2-6454c7d661eb" },
+      { "constantName": "WEBSITE_LIVE_DATE_FIELD", "uuid": "e27738ae-9839-47c6-b13c-82d6a80e5aa6" },
+      { "constantName": "PROPERTY_ON_HOLD_FIELD", "uuid": "eef6156c-5a87-4118-98e5-e3a416e0926d" },
+      { "constantName": "LISTING_TYPE_FIELD", "uuid": "8e430749-85d3-4e90-a306-78acb8acba90" },
+      { "constantName": "VISIT_SLOTS_FIELD", "uuid": "00a2854b-0647-4d63-be23-dfeb119a3459" },
+      { "constantName": "PROPERTY_FLAT_NUMBER_FIELD", "uuid": "70a9d0c7-8230-4571-9fa4-b5878a60272f" },
+      { "constantName": "PROPERTY_BALCONY_VIEW_1_FIELD", "uuid": "2ec079e9-9ba8-4fbb-8110-02b1e46f903a" },
+      { "constantName": "PROPERTY_BALCONY_VIEW_2_FIELD", "uuid": "0a8f73b9-86a7-4ca5-a120-5e71a5fc6d10" },
+      { "constantName": "PROPERTY_BALCONY_VIEW_3_FIELD", "uuid": "453b53df-67a4-4c94-8eaa-887df421e9e4" },
+      { "constantName": "PROPERTY_BALCONY_VIEW_4_FIELD", "uuid": "d0e5d87a-0938-4e92-90eb-c98fa7e0b31c" },
+      { "constantName": "PROPERTY_ORIGINAL_ASK_PRICE_FIELD", "uuid": "24ddb3e8-f601-427e-8d9c-c1ee98c79e9c" },
+      { "constantName": "PROPERTY_SOURCE_PRICE_FIELD", "uuid": "604e4ba1-e781-4c6c-91f3-de789373d9f7" },
+      { "constantName": "PROPERTY_LATEST_PRICE_FIELD", "uuid": "4b8653ab-323c-45df-a1c0-570ec405856b" },
+      { "constantName": "PROPERTY_PRICE_PER_SQFT_FIELD", "uuid": "31f49efe-4dc5-4ab7-880b-a765546ecea4" },
+      { "constantName": "PROPERTY_LPG_FIELD", "uuid": "a60dde67-f85c-4a4e-82aa-27d3ed63fc0b" },
+      { "constantName": "PROPERTY_OC_RECEIVED_FIELD", "uuid": "f436500b-cfa8-4fc7-a973-32c87c164a38" },
+      { "constantName": "PROPERTY_SELLER_URGENCY_FIELD", "uuid": "a00eb339-493b-44eb-988c-ab50d2ffe355" },
+      { "constantName": "PROPERTY_PROPERTY_STATUS_FIELD", "uuid": "9015d981-17f3-49c6-93bb-4eff52800ed9" },
+      { "constantName": "PROPERTY_OFFBOARDING_FIELD", "uuid": "e0af0693-1c87-43f6-b0dd-af2cebb554b8" },
+      { "constantName": "PROPERTY_OFFBOARDING_REASON_FIELD", "uuid": "9a8d074d-0f5a-413a-8aba-30ca5cd90385" },
+      { "constantName": "PROPERTY_SELLING_PRICE_FIELD", "uuid": "4f315635-9fa4-4f88-ae3d-b16ca73d30a1" },
+      { "constantName": "PROPERTY_OFFBOARDING_DATE_FIELD", "uuid": "91bd0e9a-d80d-48a5-8f7d-4980692ff0d7" }
+    ]
+  },
+  "seller": {
+    "universalIdentifier": "6ee7ce30-9712-4edc-b49c-6f125ff06e9c",
+    "icon": "IconUserDollar",
+    "fields": [
+      { "constantName": "SELLER_NAME_FIELD", "uuid": "b17fb3d7-b544-49ca-8a1e-1df01721cee0" },
+      { "constantName": "SELLER_STAGE_FIELD", "uuid": "4b596601-61ea-4119-8175-d6bb73310d3e" },
+      { "constantName": "SELLER_DROP_REASON_FIELD", "uuid": "601e02de-9ee6-4328-89b6-3464577833ba" },
+      { "constantName": "SELLER_EXPECTED_PRICE_FIELD", "uuid": "5a93ecd2-f26e-48a0-9578-fe6b307f1a72" },
+      { "constantName": "SELLER_PROPERTY_FIELD", "uuid": "1b54e5ce-be1c-4616-8cb5-5a3ce311ebf6" },
+      { "constantName": "SELLER_MOTIVATION_FIELD", "uuid": "357f3bb8-f18b-416c-891d-59e609838e8c" },
+      { "constantName": "SELLER_HOW_HEARD_FIELD", "uuid": "370f96e3-cc5d-4a8a-bf94-4fe247ee444c" },
+      { "constantName": "SELLER_ONBOARDING_STATUS_FIELD", "uuid": "881d3524-2ea2-4740-80f7-f23775e1562e" },
+      { "constantName": "SELLER_SOURCE_FIELD", "uuid": "8fdc1eaf-02af-4cf3-b1bd-31afb7c3334f" },
+      { "constantName": "SELLER_SELLER_URGENCY_FIELD", "uuid": "d24c3a57-fd10-42ac-a894-3ccb6e83ade0" },
+      { "constantName": "SELLER_RELATIONSHIP_MANAGER_FIELD", "uuid": "57cb224c-cf0d-4d93-ad04-2f9845a01aa6" },
+      { "constantName": "SELLER_REFERRAL_SOURCE_FIELD", "uuid": "73396508-4246-408b-95df-644e031ccc50" }
+    ]
+  },
+  "enquiry": {
+    "universalIdentifier": "e718ab0c-b6d3-456c-a496-c8d588393820",
+    "icon": "IconMessageCircle",
+    "fields": [
+      { "constantName": "ENQUIRY_NUMBER_FIELD", "uuid": "1c50de94-33b1-4076-8864-b38282dc4057" },
+      { "constantName": "ENQUIRY_TYPE_FIELD", "uuid": "c881f147-a09e-4296-b76a-6633e2d1b844" },
+      { "constantName": "ENQUIRY_STATUS_FIELD", "uuid": "c8a4a4ac-78e3-46df-9988-01f78fba34d4" },
+      { "constantName": "ENQUIRY_BUDGET_FIELD", "uuid": "cceecd1c-0aaa-4a37-a3d1-25724a862fa0" },
+      { "constantName": "ENQUIRY_PREF_ZONES_FIELD", "uuid": "a08126a2-4686-4d70-b464-74af2cf58684" },
+      { "constantName": "ENQUIRY_SOURCE_DETAIL_FIELD", "uuid": "af52ce0d-12f7-47c8-8db2-0c2d4ee4435e" },
+      { "constantName": "ENQUIRY_STATUS_DETAIL_FIELD", "uuid": "a088d1b2-7b6c-4cd6-b3ad-95b0d2995f74" }
+    ]
+  },
+  "visit": {
+    "universalIdentifier": "fecfc310-91b3-4262-8423-b28aab3882e2",
+    "icon": "IconDoorEnter",
+    "fields": [
+      { "constantName": "VISIT_NAME_FIELD", "uuid": "b2c90b2a-adae-456f-8728-2a5faedf521f" },
+      { "constantName": "VISIT_SCHEDULED_AT_FIELD", "uuid": "6e6a2fb8-7b30-4627-8cfd-59b1697440eb" },
+      { "constantName": "VISIT_STATUS_FIELD", "uuid": "d4b7fdfb-7e9c-4166-81d0-3ff8ee70e533" },
+      { "constantName": "VISIT_OTP_CODE_FIELD", "uuid": "cd4d8934-da14-4b3e-a241-6741499c2c81" },
+      { "constantName": "VISIT_FEEDBACK_TEXT_FIELD", "uuid": "ac4203f4-238e-4dd0-bec7-ac9ae1cf69fa" },
+      { "constantName": "VISIT_FEEDBACK_RATING_FIELD", "uuid": "971089a4-e859-4fa1-87ff-ca67cbfaf8ba" },
+      { "constantName": "VISIT_CONFIRMED_AT_FIELD", "uuid": "c484ef99-e726-4096-999e-aa11972ef553" },
+      { "constantName": "VISIT_COMPLETED_AT_FIELD", "uuid": "a1384524-2a38-4668-ba8e-a9ede8dd5190" },
+      { "constantName": "VISIT_CANCELLED_AT_FIELD", "uuid": "044bff8c-ba77-4174-ac32-a4eba5fd2dea" },
+      { "constantName": "VISIT_CANCELLATION_REASON_FIELD", "uuid": "9775396a-d8b0-44b8-9bcc-d94208ab9451" },
+      { "constantName": "VISIT_VISIT_OTP_FIELD", "uuid": "a86ef2df-12f2-4f4f-b181-f8007a838c5e" },
+      { "constantName": "VISIT_OTP_ATTEMPTS_FIELD", "uuid": "18b62c22-d979-4f57-80d5-a81af7e68975" },
+      { "constantName": "VISIT_PRIMARY_PAIN_POINT_FIELD", "uuid": "bc5fcce6-d740-47f4-9482-f42dd0bb6be9" },
+      { "constantName": "VISIT_BUYER_SCORE_FIELD", "uuid": "a4135d0d-4172-49f7-bbd7-7ef113561546" },
+      { "constantName": "VISIT_RESCHEDULED_TO_FIELD", "uuid": "bbce9895-599e-4e0b-a383-f6d321554920" }
+    ]
+  },
+  "propertyPriceHistory": {
+    "universalIdentifier": "c17caf56-4a8d-4818-aff0-9e720f9a3d04",
+    "icon": "IconTrendingUp",
+    "fields": [
+      { "constantName": "PPH_NAME_FIELD", "uuid": "b42755c3-d4dd-41e2-9b7a-e95fe5b0b873" },
+      { "constantName": "PPH_PRICE_FIELD", "uuid": "12516772-98bc-40f7-a172-e6c93e25ea4a" },
+      { "constantName": "PPH_UPDATED_ON_DATE_FIELD", "uuid": "d2bde2d9-439a-469b-96b5-e76de072179a" }
+    ]
+  },
+  "classifiedListing": {
+    "universalIdentifier": "69901164-6ea2-4a2c-884b-ca78583a9989",
+    "icon": "IconExternalLink",
+    "fields": [
+      { "constantName": "CL_LISTING_ID_FIELD", "uuid": "2a5c90dd-a1e2-4054-bf61-4cb14c7a1bda" },
+      { "constantName": "CL_PLATFORM_FIELD", "uuid": "77bb46a8-bf74-4d67-9eac-04913b0d2c6d" },
+      { "constantName": "CL_LISTED_ON_FIELD", "uuid": "57cbfb9a-403b-4a14-b00f-ed618d2ffb33" },
+      { "constantName": "CL_URL_FIELD", "uuid": "d7008386-262b-4175-bd41-fce3e4018d7a" },
+      { "constantName": "CL_VERIFIED_FIELD", "uuid": "9b27e5ea-dde9-4fcc-941c-99682211e0fa" },
+      { "constantName": "CL_DELISTED_ON_FIELD", "uuid": "8deeebef-920a-48f7-a65d-0a74ddd39929" },
+      { "constantName": "CL_PRICE_QUOTED_FIELD", "uuid": "af16bdfd-330e-4236-9220-a69ecd0ae939" },
+      { "constantName": "CL_ACTUAL_PRICE_FIELD", "uuid": "0aadef59-8942-4c4c-84f3-24965fb3edf5" }
+    ]
+  }
+}
