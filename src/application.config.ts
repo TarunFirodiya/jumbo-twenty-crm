@@ -11,7 +11,7 @@ export default defineApplication({
   icon: 'IconBuildingSkyscraper',
   applicationVariables: {
     DEFAULT_CURRENCY: {
-      universalIdentifier: 'd48c8bfc-11af-4b93-a300-b454169c3127',
+      universalIdentifier: 'var-001-currency-1234-567890abcdef',
       description: 'Default currency for property prices',
       value: 'INR',
       isSecret: false,
