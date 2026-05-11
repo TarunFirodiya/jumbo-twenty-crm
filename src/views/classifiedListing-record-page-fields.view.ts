@@ -4,7 +4,7 @@ import { CLASSIFIED_LISTING_UNIVERSAL_IDENTIFIER } from '../objects/classified-l
 export default defineView({
   universalIdentifier: 'b94ce762-e1cd-4e31-b72b-589f845b9ef9',
   name: 'ClassifiedListing Record Page Fields',
-  objectUniversalIdentifier: CLASSIFIEDLISTING_UNIVERSAL_IDENTIFIER,
+  objectUniversalIdentifier: CLASSIFIED_LISTING_UNIVERSAL_IDENTIFIER,
   type: ViewType.FIELDS_WIDGET,
   icon: 'IconList',
   isCompact: false,
