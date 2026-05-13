@@ -106,13 +106,11 @@ export const NAME_FIELD_UNIVERSAL_IDENTIFIER = '1ea8237c-d043-4305-a788-ccac4bdd
 export const BEDROOMS_FIELD_UNIVERSAL_IDENTIFIER = '17b4e5dd-6ab4-48c4-beb1-7694c6d7e57f';
 export const BATHROOMS_FIELD_UNIVERSAL_IDENTIFIER = '26896f45-660d-464e-9378-312639ff4d53';
 export const SQFT_FIELD_UNIVERSAL_IDENTIFIER = 'ab92e8a5-ae85-40a7-a982-565d41d50d36';
-export const STATUS_FIELD_UNIVERSAL_IDENTIFIER = '79b21e74-9893-4211-a933-c4bff831a03d';
 export const TYPE_FIELD_UNIVERSAL_IDENTIFIER = '62dd2bc0-f87a-499f-a2ab-735e7b53c562';
 export const ZONE_FIELD_UNIVERSAL_IDENTIFIER = 'b9746f33-ad4f-44c5-99dc-008ef261d91e';
 export const FILES_FIELD_UNIVERSAL_IDENTIFIER = '29d9b019-ac02-45bd-a242-81c5bb459c23';
 
 // New field IDs
-export const JUMBO_ID_FIELD = '03d065e1-2305-49d7-9e83-84f1a3aa6515';
 export const MSP_FIELD = '53d6aa40-4d13-4374-b1f8-8f7c02b3ac1b';
 export const MAINTENANCE_FIELD = '188013eb-82b9-4d0c-bd7e-f99e2b48df70';
 export const CARPET_AREA_FIELD = 'b5230be9-208b-41a1-bdfa-9bb7bea1da85';
@@ -140,7 +138,6 @@ export const PROPERTY_BALCONY_VIEW_1_FIELD = '2ec079e9-9ba8-4fbb-8110-02b1e46f90
 export const PROPERTY_BALCONY_VIEW_2_FIELD = '0a8f73b9-86a7-4ca5-a120-5e71a5fc6d10';
 export const PROPERTY_BALCONY_VIEW_3_FIELD = '453b53df-67a4-4c94-8eaa-887df421e9e4';
 export const PROPERTY_BALCONY_VIEW_4_FIELD = 'd0e5d87a-0938-4e92-90eb-c98fa7e0b31c';
-export const PROPERTY_ORIGINAL_ASK_PRICE_FIELD = '24ddb3e8-f601-427e-8d9c-c1ee98c79e9c';
 export const PROPERTY_SOURCE_PRICE_FIELD = '604e4ba1-e781-4c6c-91f3-de789373d9f7';
 export const PROPERTY_LATEST_PRICE_FIELD = '4b8653ab-323c-45df-a1c0-570ec405856b';
 export const PROPERTY_PRICE_PER_SQFT_FIELD = '31f49efe-4dc5-4ab7-880b-a765546ecea4';
@@ -197,21 +194,6 @@ export default defineObject({
       name: 'squareFeet',
     },
     {
-      universalIdentifier: STATUS_FIELD_UNIVERSAL_IDENTIFIER,
-      type: FieldType.SELECT,
-      label: 'Status',
-      icon: 'IconStatusChange',
-      defaultValue: `'${PropertyStatus.NEW}'`,
-      options: [
-        { id: '8f03367e-8570-4c84-966e-8fd17c37b560', value: PropertyStatus.NEW, label: 'New', position: 0, color: 'blue' },
-        { id: '9445fb0c-3579-4603-adfd-1699d994eec6', value: PropertyStatus.LISTED, label: 'Listed', position: 1, color: 'green' },
-        { id: 'daf2f8ee-2ff1-4c18-b664-589be06ffcde', value: PropertyStatus.UNDER_OFFER, label: 'Under Offer', position: 2, color: 'orange' },
-        { id: '5d6a1d05-edf1-424d-8b24-7f5a2689d796', value: PropertyStatus.SOLD, label: 'Sold', position: 3, color: 'red' },
-        { id: '9b01ef5d-a9af-4339-b49e-35323d31d84b', value: PropertyStatus.WITHDRAWN, label: 'Withdrawn', position: 4, color: 'gray' },
-      ],
-      name: 'status',
-    },
-    {
       universalIdentifier: TYPE_FIELD_UNIVERSAL_IDENTIFIER,
       type: FieldType.SELECT,
       label: 'Property Type',
@@ -253,14 +235,6 @@ export default defineObject({
       ],
     },
     // New fields
-    {
-      universalIdentifier: JUMBO_ID_FIELD,
-      type: FieldType.TEXT,
-      label: 'Jumbo ID',
-      description: 'Auto-generated Jumbo reference ID',
-      icon: 'IconHash',
-      name: 'jumboId',
-    },
     {
       universalIdentifier: MSP_FIELD,
       type: FieldType.CURRENCY,
@@ -575,14 +549,6 @@ export default defineObject({
         { id: '53b27ba6-88ac-4f73-9e8a-e30c9955872b', value: BalconyView.GREEN_LANDSCAPE, label: 'Green Landscape', position: 6, color: 'green' },
       ],
       name: 'balconyView4',
-    },
-    {
-      universalIdentifier: PROPERTY_ORIGINAL_ASK_PRICE_FIELD,
-      type: FieldType.CURRENCY,
-      label: 'Original Ask Price',
-      description: 'Initial seller asking price',
-      icon: 'IconCurrencyRupee',
-      name: 'originalAskPrice',
     },
     {
       universalIdentifier: PROPERTY_SOURCE_PRICE_FIELD,

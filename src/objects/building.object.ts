@@ -4,8 +4,6 @@ export const BUILDING_UNIVERSAL_IDENTIFIER = '73412f3f-c96a-42c6-ab1c-d66d5c6942
 export const BUILDING_NAME_FIELD = 'eec46cf4-6b68-4f78-a11d-72dbde406405';
 export const BUILDING_LOCALITY_FIELD = '30366be4-4e78-4439-ad1b-91b89432bbbb';
 export const BUILDING_NEAREST_LANDMARK_FIELD = '7296e46d-82c7-4c15-9c56-29514ee88299';
-export const BUILDING_POSSESSION_DATE_FIELD = '8d7f5bb6-f713-40cf-adc1-e1415a212e90';
-export const BUILDING_TOTAL_FLOORS_FIELD = '547b2fa9-a0c0-4734-9bf4-e8c06f871b52';
 export const BUILDING_TOTAL_UNITS_FIELD = 'ad90d158-e356-4335-aa51-0dfa4e00101b';
 export const BUILDING_ACRES_FIELD = 'e7b3ee04-7574-479f-9ff0-07c2e975c7f0';
 export const BUILDING_MAP_LINK_FIELD = '4a657b0e-61bc-4446-ae6f-34970ed9aa86';
@@ -25,6 +23,7 @@ export const BUILDING_BUILDER_OPERATIONAL_SINCE_FIELD = '06479414-6b0b-4f70-a67a
 export const BUILDING_BUILDER_CATEGORY_FIELD = 'f3f53ca5-ba46-4125-a384-ccae03627607';
 export const BUILDING_PROJECT_ID_FIELD = 'c52b3cee-ffee-448f-a459-22533a924ace';
 export const BUILDING_PROJECT_ACRES_FIELD = 'abf5f27c-2812-4c41-8769-2bbfca9ed6e6';
+export const BUILDING_RERA_DOCUMENTS_FIELD = '2343343a-c65a-4caf-b268-f86aaadb0778';
 
 enum UnderConstructionStatus {
   UNDERCONSTRUCTION = 'UNDERCONSTRUCTION',
@@ -56,10 +55,11 @@ export default defineObject({
     },
     {
       universalIdentifier: BUILDING_LOCALITY_FIELD,
-      type: FieldType.TEXT,
+      type: FieldType.SELECT,
       label: 'Locality',
       description: 'Area or neighbourhood',
       icon: 'IconMapPin',
+      options: [],
       name: 'locality',
     },
     {
@@ -69,22 +69,6 @@ export default defineObject({
       description: 'Prominent nearby landmark',
       icon: 'IconFlag',
       name: 'nearestLandmark',
-    },
-    {
-      universalIdentifier: BUILDING_POSSESSION_DATE_FIELD,
-      type: FieldType.DATE,
-      label: 'Possession Date',
-      description: 'Expected possession or completion date',
-      icon: 'IconCalendar',
-      name: 'possessionDate',
-    },
-    {
-      universalIdentifier: BUILDING_TOTAL_FLOORS_FIELD,
-      type: FieldType.NUMBER,
-      label: 'Total Floors',
-      description: 'Number of floors in the building',
-      icon: 'IconLayers',
-      name: 'totalFloors',
     },
     {
       universalIdentifier: BUILDING_TOTAL_UNITS_FIELD,
@@ -261,6 +245,14 @@ export default defineObject({
       description: 'Total project land area in acres',
       icon: 'IconRuler',
       name: 'projectAcres',
+    },
+    {
+      universalIdentifier: BUILDING_RERA_DOCUMENTS_FIELD,
+      type: FieldType.FILES,
+      label: 'RERA Documents',
+      description: 'RERA registration documents from authority website',
+      icon: 'IconFileCertificate',
+      name: 'reraDocuments',
     },
   ],
 });
