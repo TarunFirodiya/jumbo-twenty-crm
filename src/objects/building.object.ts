@@ -255,6 +255,9 @@ export default defineObject({
       description: 'RERA registration documents from authority website',
       icon: 'IconFileCertificate',
       name: 'reraDocuments',
+      universalSettings: {
+        maxNumberOfValues: 5,
+      },
     },
   ],
 });
