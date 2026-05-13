@@ -59,7 +59,9 @@ export default defineObject({
       label: 'Locality',
       description: 'Area or neighbourhood',
       icon: 'IconMapPin',
-      options: [],
+      options: [
+        { id: '00000000-0000-4000-a000-000000000001', value: 'TBD', label: 'TBD - Will be updated', position: 0, color: 'gray' },
+      ],
       name: 'locality',
     },
     {
