@@ -1,5 +1,5 @@
 import { defineView, ViewType } from 'twenty-sdk/define';
-import { PROPERTY_INSPECTION_UNIVERSAL_IDENTIFIER } from '../objects/propertyInspection.object';
+import { PROPERTY_INSPECTION_UNIVERSAL_IDENTIFIER } from '../objects/property-inspection.object';
 
 export default defineView({
   universalIdentifier: 'a035cf27-29cc-40b4-8561-dbe8b534d5ad',

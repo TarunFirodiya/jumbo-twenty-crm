@@ -1,5 +1,5 @@
 import { definePageLayout, PageLayoutTabLayoutMode } from 'twenty-sdk/define';
-import { PROPERTY_PRICE_HISTORY_UNIVERSAL_IDENTIFIER } from '../objects/propertyPriceHistory.object';
+import { PROPERTY_PRICE_HISTORY_UNIVERSAL_IDENTIFIER } from '../objects/property-price-history.object';
 
 export default definePageLayout({
   universalIdentifier: '88ee9eae-b4cd-4614-a109-045f227483ec',

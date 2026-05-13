@@ -1,5 +1,5 @@
 import { definePageLayout, PageLayoutTabLayoutMode } from 'twenty-sdk/define';
-import { PROPERTY_CATALOGUE_UNIVERSAL_IDENTIFIER } from '../objects/propertyCatalogue.object';
+import { PROPERTY_CATALOGUE_UNIVERSAL_IDENTIFIER } from '../objects/property-catalogue.object';
 
 export default definePageLayout({
   universalIdentifier: '8385b299-3b64-48ea-ab27-1c55f2fc1bba',
