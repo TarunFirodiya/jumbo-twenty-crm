@@ -50,6 +50,8 @@ export const INSPECTION_SCHEDULED_FIELD = '2623aaa1-0a35-4915-a6ec-825fd78c0709'
 export const INSPECTION_HOUSING_VERIFICATION_FIELD = 'b8684fad-d1c6-4e78-8fe5-e0d3a7726685';
 export const INSPECTION_99ACRES_VERIFICATION_FIELD = 'c1a824a2-7d88-4c78-bde2-86f2656cd6d1';
 export const INSPECTION_FLOOR_PLAN_FIELD = '9ce58085-2f28-42d7-8f3b-dbd61e72e651';
+export const INSPECTION_GRADE_FIELD = '0913f7e7-d177-4b76-afd4-3197bfdf2af6';
+export const INSPECTION_STATUS_FIELD = '2cfe423b-a138-4711-8c7b-faa8fdb14815';
 
 // More UUIDs for remaining fields
 export const INSPECTION_COMPASS_PHOTO_FIELD = '8a4d7c3e-b12f-4a8e-9c5d-7e3f9a1b2c4d';
@@ -654,6 +656,35 @@ export default defineObject({
       universalSettings: {
         maxNumberOfValues: 5,
       },
+    },
+    {
+      universalIdentifier: INSPECTION_GRADE_FIELD,
+      type: FieldType.SELECT,
+      label: 'Grade',
+      description: 'Catalogue rating grade',
+      icon: 'IconStar',
+      options: [
+        { id: '00000000-0000-4000-a000-000000000011', value: 'GREAT', label: 'Great', position: 0, color: 'green' },
+        { id: '00000000-0000-4000-a000-000000000012', value: 'GOOD', label: 'Good', position: 1, color: 'yellow' },
+        { id: '00000000-0000-4000-a000-000000000013', value: 'BAD', label: 'Bad', position: 2, color: 'red' },
+      ],
+      name: 'grade',
+    },
+    {
+      universalIdentifier: INSPECTION_STATUS_FIELD,
+      type: FieldType.SELECT,
+      label: 'Status',
+      description: 'Inspection workflow status',
+      icon: 'IconStatusChange',
+      defaultValue: '\'DRAFT\'',
+      options: [
+        { id: '00000000-0000-4000-a000-000000000021', value: 'SCHEDULED', label: 'Scheduled', position: 0, color: 'blue' },
+        { id: '00000000-0000-4000-a000-000000000022', value: 'DRAFT', label: 'Draft', position: 1, color: 'yellow' },
+        { id: '00000000-0000-4000-a000-000000000023', value: 'APPROVED', label: 'Approved', position: 2, color: 'green' },
+        { id: '00000000-0000-4000-a000-000000000024', value: 'REJECTED', label: 'Rejected', position: 3, color: 'red' },
+        { id: '00000000-0000-4000-a000-000000000025', value: 'CANCELED', label: 'Canceled', position: 4, color: 'gray' },
+      ],
+      name: 'status',
     },
   ],
 });
